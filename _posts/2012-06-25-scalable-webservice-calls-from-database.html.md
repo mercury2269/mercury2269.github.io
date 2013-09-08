@@ -234,6 +234,6 @@ It seems like a lot of configuration and setup, and it is. However what you do g
 
   [1]: http://www.amazon.com/gp/product/1590599993/ref=as_li_ss_tl?ie=UTF8&tag=sermassblo-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1590599993
   [2]: http://fordevsbydevs.blogspot.com
-  [3]: http://blog.maskalik.com/get/12-06/QueuesAfterInsert.png
+  [3]: /uploads/12-06/QueuesAfterInsert.png
   [4]: http://blogs.msdn.com/b/sql_service_broker/archive/2008/11/21/announcing-service-broker-external-activator.aspx
   [5]: http://www.microsoft.com/en-us/download/details.aspx?id=16978

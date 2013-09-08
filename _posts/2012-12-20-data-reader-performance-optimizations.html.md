@@ -39,6 +39,6 @@ If your query returns only one row or small amount of rows it doesn't matter whi
 If you want to see for yourself you can download the [source code][3] and run it against the AdventureWorks database.
 
 
-  [1]: http://blog.maskalik.com/get/2012/12/one-row.png
-  [2]: http://blog.maskalik.com/get/2012/12/datareader-multiplerows.png
-  [3]: http://blog.maskalik.com/get/2012/12/SqlDataReaderPerformance.zip
+  [1]: /uploads/2012/12/one-row.png
+  [2]: /uploads/2012/12/datareader-multiplerows.png
+  [3]: /uploads/2012/12/SqlDataReaderPerformance.zip

@@ -21,5 +21,5 @@ Here is the link to the [modified source code][3] if you ever want to move your 
 
 
   [1]: http://www.hanselman.com/blog/RemovingDeadTracksDuplicatesThatDontExistFromITunesUsingC.aspx
-  [2]: http://blog.maskalik.com/get/2012/11/Screenshot.png
+  [2]: /uploads/2012/11/Screenshot.png
   [3]: https://github.com/mercury2269/ITunesManager

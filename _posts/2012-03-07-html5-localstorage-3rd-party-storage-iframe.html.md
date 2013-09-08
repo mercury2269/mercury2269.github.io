@@ -277,9 +277,9 @@ Now you know how cross domain storage/communication is achieved with modern brow
 Cheers
 
   [1]: http://www.websequencediagrams.com/?lz=dGl0bGUgM3JkIHBhcnR5IFdyaXRlCgpBbGljZSdzIEJyb3dzZXIgLT5ib2IuY29tOiBMb2dpbgpub3RlIHJpZ2h0IG9mIAAUCQAfByBsb2dzIABABSBhbmQgY3JlYXRlcyBhbiBpZnJhbWUgXG53aGljaCBjYWxscyBhAHcLZG9tYWluIHdpdGhcbgCBAAh1bnNlY3VyZSBpbmZvcm1hdGlvbgoKAIENBy0-AIEgDzogUmVzcG9uc2UAQgUAbAhzcmM6IGdsb2JhbC5jb20AgVIUIGZyYW5rAIFjBgArCwANCS93cml0ZT9uYW1lPQCCHwUKAIF7DwA1C0ZyYW5rIHN0b3Jlc1xuaXQgaW4gbG9jYWxTdG9yYWdlCgoKAIJuEFJlYWQ&s=rose
-  [2]: http://blog.maskalik.com/get/12-03/localStorage-browser-support.png
-  [3]: http://blog.maskalik.com/get/12-03/postMessage-browser-support.png
+  [2]: /uploads/12-03/localStorage-browser-support.png
+  [3]: /uploads/12-03/postMessage-browser-support.png
   [4]: http://www.w3schools.com/browsers/browsers_explorer.asp
   [5]: http://www.onlineaspect.com/2010/01/15/backwards-compatible-postmessage/
   [6]: http://stackoverflow.com/questions/389456/cookie-blocked-not-saved-in-iframe-in-internet-explorer#answer-389458
-  [7]: http://blog.maskalik.com/get/12-03/write.png
+  [7]: /uploads/12-03/write.png

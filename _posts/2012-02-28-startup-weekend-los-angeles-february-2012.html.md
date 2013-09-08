@@ -41,4 +41,4 @@ P.S. We are continuing our project after the weekend, which is exciting on it's 
 
   [1]: http://coloft.com/
   [2]: http://www.factual.com/
-  [3]: http://blog.maskalik.com/get/12-02/morning.JPG
+  [3]: /uploads/12-02/morning.JPG

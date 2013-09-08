@@ -12,7 +12,7 @@ I've been reviewing [MiniProfiler][1] library source code and here are things th
 ##Grouping related files in visual studio. 
 I've noticed that classes that inherit from an interface are grouped together in the Visual Studio like this: 
 
-![](http://blog.maskalik.com/get/2013/05/visualstudio-grouped-objects.png)
+![](/uploads/2013/05/visualstudio-grouped-objects.png)
 
 That is pretty neat, that way you don't have to hunt around for all implementations of the interface and it's all in one place.
 

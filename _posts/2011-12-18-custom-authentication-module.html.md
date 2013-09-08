@@ -209,9 +209,9 @@ So now we have a long lived session that will persist for 60 days and a secure s
 [![kick it on DotNetKicks.com][2]][5]
 
 
-  [1]: http://blog.maskalik.com/get/12-02/custom_authenticaion_cookies.png
+  [1]: /uploads/12-02/custom_authenticaion_cookies.png
   [2]: http://www.dotnetkicks.com/Services/Images/KickItImageGenerator.ashx?url=http%3a%2f%2fblog.maskalik.com%2fasp-net%2fcustom-authentication-module
-  [3]: http://blog.maskalik.com/get/12-02/http_identity.png
-  [4]: http://blog.maskalik.com/get/12-02/CustomAuthenticationSample.zip
+  [3]: /uploads/12-02/http_identity.png
+  [4]: /uploads/12-02/CustomAuthenticationSample.zip
   [5]: http://www.dotnetkicks.com/kick/?url=http%3a%2f%2fblog.maskalik.com%2fasp-net%2fcustom-authentication-module
-  [6]: http://blog.maskalik.com/get/12-02/https_identity.png
+  [6]: /uploads/12-02/https_identity.png
