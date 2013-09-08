@@ -15,9 +15,11 @@
 	   <meta name="keywords" content="{{page.meta-keywords}}" />
 	{% endif%}
 	{% if page.permalink %}
-	   <link rel="canonical" href="http://blog.maskalik.com/tdd/understanding-is-key-to-success" />
+	   <link rel="canonical" href="{{page.permalink}}" />
 	{% endif %}
-
+    <link rel="stylesheet" type="text/css" href="/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="/css/prettify.css" />
 </head>
     <body>
         <div class="wrap">
@@ -26,7 +28,7 @@
                     <div class="container">
                         <div id="logo">
                             <a href="/" title="Sergey Maskalik&#39;s blog">
-                                <img alt="Sergey Maskalik" width="83" height="83" title="Sergey Maskalik" src="/assets/images/logo.png")"/>
+                                <img alt="Sergey Maskalik" width="83" height="83" title="Sergey Maskalik" src="/assets/images/logo.png" />
                                 <span>Sergey Maskalik&#39;s blog</span>
                             </a>
                         </div>
@@ -63,10 +65,10 @@
                         </div>
                         <div id="sidebar">
                             <span class="icon">
-                                <a href="https://twitter.com/#!/mercury2269"><img src="/Content/Images/twitter_follow.png" alt="Follow me on twitter" width="152" height="23"/></a>
+                                <a href="https://twitter.com/#!/mercury2269"><img src="/assets/Images/twitter_follow.png" alt="Follow me on twitter" width="152" height="23"/></a>
                             </span>
                             <span class="icon">
-                                <a href="http://feeds.feedburner.com/sergeymaskaliksblog"><img src="/Content/Images/rssfeed_subscribe.png" alt="Subscribe to rss feed" width="152" height="23"/></a>
+                                <a href="http://feeds.feedburner.com/sergeymaskaliksblog"><img src="/assets/Images/rssfeed_subscribe.png" alt="Subscribe to rss feed" width="152" height="23"/></a>
                             </span>
                             <div class="section">
                                 <h4>RECENT POSTS</h4>
@@ -84,5 +86,6 @@
 				<p>Powered by Jekyll</p>
             </div>
         </div>
+        <script type="text/javascript" src="/assets/js/prettify.js"></script>
     </body>
 </html>
