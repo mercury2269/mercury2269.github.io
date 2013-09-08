@@ -20,7 +20,7 @@ a:hover
 {
 	color: #406618;
 }
-li          { list-style: none;}
+content.li          { list-style: none;}
 
 h1, h2, h3, h4, h5, h6
 {
@@ -455,6 +455,7 @@ span.tags
 {
     display: block;
     padding: 10px 0;
+    margin-top: 50px;
 }
 a.tag 
 {

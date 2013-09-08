@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Cross Domain Communication And Data Storage With localStorage And postMessage"
 meta-description: "Learn how you can create cross domain data storage and read from multiple domains. "
-meta-keywords: ""
-publish-date: "2012-03-07"
 tags: ["cross-domain","html5","authentication"]
 categories: ["dom"]
 migrated: "true"
-permalink: "/dom/html5-localstorage-3rd-party-storage-iframe"
+permalink: "/dom/html5-localstorage-3rd-party-storage-iframe/"
 ---
 ##Summary
 

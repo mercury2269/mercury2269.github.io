@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Sprinkle some design into ASP.NET User Controls"
 meta-description: "Simple techniques to make ASP.NET User Controls independent unit of work."
-meta-keywords: ""
-publish-date: "2012-02-20"
 tags: ["asp.net","patterns","user-control"]
 categories: ["asp-net"]
 migrated: "true"
-permalink: "/asp-net/user-controls-design-patterns"
+permalink: "/asp-net/user-controls-design-patterns/"
 ---
 We don't always get to work on the cool stuff like ASP.NET MVC. So for those unfortunate ones we'll explore some things that can make ASP.NET User Controls follow some patterns and in the end make Web Forms world a better place :)
 

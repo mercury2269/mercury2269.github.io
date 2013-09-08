@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Changing the Location of Your ITunes Library Via C#"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-11-25"
 tags: ["itunes"]
 categories: ["itunes"]
 migrated: "true"
-permalink: "/itunes/change-location-of-itunes-library"
+permalink: "/itunes/change-location-of-itunes-library/"
 ---
 iTunes is my least favorite software when it comes to managing music library. However sometimes you have no choice and have to deal with it. Couple times in the past I had to completely recreate my iTunes library from scratch since I could not move it to the newly installed system. Recently when I've build a new PC I was a bit smarter and did the research and mapped my library to the exact same folder and everything worked and everything transferred perfect. 
 

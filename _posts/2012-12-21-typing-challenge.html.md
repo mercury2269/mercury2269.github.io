@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Typing Challenge"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-12-21"
 tags: ["better-programmer"]
 categories: ["better-programmer"]
 migrated: "true"
-permalink: "/better-programmer/typing-challenge"
+permalink: "/better-programmer/typing-challenge/"
 ---
 It's sad to see many professional programmers typing with two or three fingers. Like in any profession you should become a master of your craft, and for us developers touch typing is a basic skill that you must master. Like a chef who has never learned how to properly prepare vegetables it's not efficient, makes your already difficult profession harder and just not professional. 
 

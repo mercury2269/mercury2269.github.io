@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "SQLite + Dapper = Simple Data Access Layer"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-11-18"
 tags: ["dapper","sqlite","asp.net"]
 categories: ["asp-net"]
 migrated: "true"
-permalink: "/asp-net/sqlite-simple-database-with-dapper"
+permalink: "/asp-net/sqlite-simple-database-with-dapper/"
 ---
 ##Summary
 SQLite is one of the little databases that you can use in your project when you don't want to have a full blown database and want something simple, quick and awesome. It's very easy to distribute or share with your team since it's just a single file and can be checked into source control. Could be used as a development database, one off database for your desktop applications or just about anything else. It's definitely nice to keep in your development tool belt. 

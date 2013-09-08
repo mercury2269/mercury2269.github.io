@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Single Page Applications - Exciting Next Step In Evolution"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2013-03-26"
 tags: []
 categories: ["spa"]
 migrated: "true"
-permalink: "/spa/introduction"
+permalink: "/spa/introduction/"
 ---
 ##SPAs bring new fresh user experience
 The web is constantly evolving. About 7 years ago we didn’t know what jQuery was and AJAX was mostly associated with the cleaning product. Now it’s 2013 and it is no longer enough to sprinkle simple AJAX calls to get some dynamic data without refreshing the page. Modern applications run completely in the browser and provide a very fast and intuitive user interface.  In addition, it creates a new user experience that makes it feel fresh and vibrant, while going back to standard web sites with postbacks feel clumsy and slow. No wonder new startups are embracing this concept. It gives you an edge and can make or break a company when dealing with competition.

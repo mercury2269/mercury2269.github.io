@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Ensuring Variables Are Atomic or Thread Safe"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2013-02-09"
 tags: ["thread-safety"]
 categories: ["asp-net"]
 migrated: "true"
-permalink: "/asp-net/primitive-types-thread-safe-automic"
+permalink: "/asp-net/primitive-types-thread-safe-automic/"
 ---
 When multiple threads are writing to the static field you need to make sure that the writing operation is atomic or only one thread can write at a time. One of the ways to ensure you static fields are thread safe is to use **Interlocked** class part from the System.Threading namespace. 
 

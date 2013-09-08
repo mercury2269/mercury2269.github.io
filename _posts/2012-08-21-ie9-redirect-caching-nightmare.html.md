@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "IE9 Redirect Caching Feature Might Cause Frustration"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-08-21"
 tags: ["ie9","redirect","asp.net","browser-cache"]
 categories: ["asp-net"]
 migrated: "true"
-permalink: "/asp-net/ie9-redirect-caching-nightmare"
+permalink: "/asp-net/ie9-redirect-caching-nightmare/"
 ---
 If you have been doing web development for some time I'm sure you have come across internet explorer caching feature. A less known redirect caching feature that was released in IE9 has just caused me a day of frustration and hopefully it will save you a day of nightmare. 
 

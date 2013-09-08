@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "SQL Server Service Broker troubleshooting external activation"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-07-13"
 tags: ["service-broker","external-activation"]
 categories: ["sql-server-service-broker"]
 migrated: "true"
-permalink: "/sql-server-service-broker/troubleshooting-external-activation"
+permalink: "/sql-server-service-broker/troubleshooting-external-activation/"
 ---
 Since I've been working with Service Broker I realized how tricky it is to administer and hard to see overall picture. I still come across behaviors I don't understand, and now sure how exactly to reproduce them, they just happen randomly. However I did make a lot of progress on troubleshooting and can get most things back up and running again. 
 

@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Service Broker: Setup Email Notifications On Disabled Queues"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-07-21"
 tags: ["service-broker","sql-server"]
 categories: ["sql-server-service-broker"]
 migrated: "true"
-permalink: "/sql-server-service-broker/setup-disabled-queues-email-notification"
+permalink: "/sql-server-service-broker/setup-disabled-queues-email-notification/"
 ---
 It took me some time to figure our this part even though it should be trivial. So hopefully this guide will help someone in the future. I think the hardest part was to understand the security context under which internal stored procedures run when activated by service broker.
 

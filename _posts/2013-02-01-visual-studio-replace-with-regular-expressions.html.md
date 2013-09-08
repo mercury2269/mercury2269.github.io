@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Replace With Regular Expressions in Visual Studio"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2013-02-01"
 tags: ["regex"]
 categories: ["asp-net"]
 migrated: "true"
-permalink: "/asp-net/visual-studio-replace-with-regular-expressions"
+permalink: "/asp-net/visual-studio-replace-with-regular-expressions/"
 ---
 Regular expressions are very handy especially when you are refactoring and there is a lot of manual changes. Visual Studio Replace with regex came in really handy when porting our code base at work to use [MiniProfiler][1]. Since MiniProfiler returns a DbConnection rather than SqlConnection, there are few small shorthands that no longer worked with DbConnection. 
 

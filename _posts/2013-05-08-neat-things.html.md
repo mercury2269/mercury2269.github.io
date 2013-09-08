@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Neat Features In MiniProfiler Library"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2013-05-08"
 tags: []
 categories: ["miniprofiler"]
 migrated: "true"
-permalink: "/miniprofiler/neat-things"
+permalink: "/miniprofiler/neat-things/"
 ---
 I've been reviewing [MiniProfiler][1] library source code and here are things that I though were unusual and neat. The reason why it caught my attention is because it's not something that I use every day so I wanted to list it here. Also, I know that developers who I work with at my job don't use these features also so they could probably find it interesting. 
 

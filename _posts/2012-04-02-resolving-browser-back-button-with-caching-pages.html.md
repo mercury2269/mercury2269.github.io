@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Prevent back button to serve cached content with ASP.NET"
 meta-description: "How to tell browsers not to cache pages when clicking back button."
-meta-keywords: ""
-publish-date: "2012-04-02"
 tags: ["asp.net","browser-cache"]
 categories: ["asp-net"]
 migrated: "true"
-permalink: "/asp-net/resolving-browser-back-button-with-caching-pages"
+permalink: "/asp-net/resolving-browser-back-button-with-caching-pages/"
 ---
 Browsers cache pages by default in order to quickly serve the content when back button is clicked. There are times however when you don't want that functionality. For example if your user logs out you don't want them to be able to press back button and navigate back to member page again. Or other scenarios where javascript updates shopping cart on the page, but when you hit back button on the page browser serves up content from cache which doesn't have the new item count in the cart.
 

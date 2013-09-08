@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "JSON.NET Implementing Custom Serialization"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-04-24"
 tags: ["asp.net","json.net","serialization"]
 categories: ["asp-net"]
 migrated: "true"
-permalink: "/asp-net/json-net-implement-custom-serialization"
+permalink: "/asp-net/json-net-implement-custom-serialization/"
 ---
 JSON.NET is a great library for serializing objects to and from json strings. In case you need to have a more control of how your object is being serialized this post covers creation of custom json converter. For instance, I came across a scenario where a json result had to have a property name starting with a $(dollar sign) like "$and" and as you may guess properties in .NET cannot start with a dollar sign. So that's where we would need a custom json converter.
 

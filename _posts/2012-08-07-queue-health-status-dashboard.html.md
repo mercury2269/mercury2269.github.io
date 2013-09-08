@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Creating Service Broker Status Dashboard With Knockoutjs"
 meta-description: "Step by step guide on creating a service broker health status dashboard using knockoutjs and webmethods"
-meta-keywords: ""
-publish-date: "2012-08-07"
 tags: ["service-broker","knockoutjs"]
 categories: ["sql-server-service-broker"]
 migrated: "true"
-permalink: "/sql-server-service-broker/queue-health-status-dashboard"
+permalink: "/sql-server-service-broker/queue-health-status-dashboard/"
 ---
 #What am I trying to solve.. 
 

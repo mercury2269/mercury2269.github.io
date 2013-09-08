@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Powershell Commands And Notes"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2013-04-14"
 tags: ["powershell"]
 categories: []
 migrated: "true"
-permalink: "/powershell"
+permalink: "/powershell/"
 ---
 ##Get-Help
 

@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "2 Legged OAuth with RestSharp"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-07-05"
 tags: ["restsharp","oauth","asp.net"]
 categories: ["asp-net"]
 migrated: "true"
-permalink: "/asp-net/restsharp-2-legged-oath"
+permalink: "/asp-net/restsharp-2-legged-oath/"
 ---
 [Restsharp][1] is a nice little library that abstracts calling webservices in .NET. It also provides ability to add authenticators to web requests which add required oauth signatures and tokens. At first I didn't see the 2 Legged Oauth authenticator, but after almost going through the pain of making my own I've discovered that it does support 2 legged oauth. Here is how to create an authenticated 2 legged Oauth request.
 

@@ -1,12 +1,10 @@
 ---
+layout: post
 title: "TDD - Understanding Is A Key To Success"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2013-07-12"
-tags: []
 categories: ["tdd"]
 migrated: "true"
-permalink: "/tdd/understanding-is-key-to-success"
+permalink: "/tdd/understanding-is-key-to-success/"
 ---
 I've been practicing Test Driven Development (TDD) for a while and recently I learned that my tests were not really helping but actually becoming a huge burden. So for the past couple months I've been on a journey to truly master the TDD and I'm at the point now where I think I have a much better understanding of it. Through my struggles and discoveries with doing TDD comes out this blog post. 
 

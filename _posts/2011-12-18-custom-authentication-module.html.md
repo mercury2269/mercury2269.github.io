@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Building persistent identity and secure authentication module in ASP.NET"
 meta-description: "Simple module to allow users to stay logged for long periods of time as well as having a separate secure session."
-meta-keywords: ""
-publish-date: "2011-12-18"
 tags: ["asp.net","authentication","httpmodule","iidentity"]
 categories: ["asp-net"]
 migrated: "true"
-permalink: "/asp-net/custom-authentication-module"
+
 ---
 I think it's awesome when sites allow you to stay logged in for long periods of time. As well as asking to re-login when I try to go to some pages where higher level security is needed like account or credit cart pages. It makes me feel warm and secure inside. 
 

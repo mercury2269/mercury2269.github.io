@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Startup Weekend Los Angeles February 2012 Review"
 meta-description: "My first startup weekend experience. "
-meta-keywords: ""
-publish-date: "2012-02-28"
 tags: ["startup-weekend"]
 categories: ["startup"]
 migrated: "true"
-permalink: "/startup/startup-weekend-los-angeles-february-2012"
+permalink: "/startup/startup-weekend-los-angeles-february-2012/"
 ---
 If you are like me who'd rather work on your own company than come to work. Who has a lot of side projects that keep you up late at night. And you've read books on startups and have many more that you want to read, I think you need to know about startup weekends! Why? because I think you have been missing out on a lot of fun and opportunities to connect with people like you are. 
 

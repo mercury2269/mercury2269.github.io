@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Displaying MiniProfiler For Logged In Developers with MVC4"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2013-02-11"
 tags: ["asp.net-mvc-4","miniprofiler"]
 categories: ["asp-net"]
 migrated: "true"
-permalink: "/asp-net/mvc4-role-base-miniprofiler"
+permalink: "/asp-net/mvc4-role-base-miniprofiler/"
 ---
 ASP.NET MVC 4 introduced an important change in membership providers. Moving away from core membership to a more flexible and simpler [SimpleMembershipProvider][1]. 
 Default "Internet Application" template initializes SimpleMembership by including an action filer InitializeSimpleMembership which gets gets added to the Account controller. So whenever you try to access account controller a filer would check if the SimpleMembershipInitializer was initialized and do the necessary work if needed.

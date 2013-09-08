@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Setting up MiniProfiler with WCF"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2013-02-04"
 tags: ["asp.net-wcf","miniprofiler"]
 categories: []
 migrated: "true"
-permalink: "/setting-up-miniprofiler-to-work-with-wcf"
+permalink: "/setting-up-miniprofiler-to-work-with-wcf/"
 ---
 First of all MiniProfiler is awesome! And lucky for me some smart people made it work with WCF. Since there is no official guide on setting up the project I had to get the examples and work from there. Here is what I had to do in order to get it working. 
 

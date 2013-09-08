@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Blog posts that I keep coming back to"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-03-06"
 tags: []
 categories: ["favorites"]
 migrated: "true"
-permalink: "/favorites/blog-posts"
+permalink: "/favorites/blog-posts/"
 ---
 Here is a list of my favorite blog posts.
 

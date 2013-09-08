@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Javascript patterns"
 meta-description: "Javascript patterns"
-meta-keywords: ""
-publish-date: "2012-08-08"
 tags: ["javascript"]
 categories: ["guides"]
 migrated: "true"
-permalink: "/guides/javascript-patterns"
+permalink: "/guides/javascript-patterns/"
 ---
 #Immediate Function
 

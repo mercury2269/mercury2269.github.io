@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "What it means to be a good developer..."
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-04-26"
 tags: ["thoughts"]
 categories: []
 migrated: "true"
-permalink: "/part-of-being-a-good-developer"
+permalink: "/part-of-being-a-good-developer/"
 ---
 Software development has definitely seen an exponential growth in the past decade. And along with that came an immense demand for good developers. With only few industries that are hiring today it's not uncommon to meet with a developer candidate at an interview who has a wonderful resume, but when you ask them to write a simple algorithm or even a nested for loop they really have a hard time. While I believe it's the best job ever, it's not for everyone. With this post I'd like to spell out what it means to be a good developer.
 

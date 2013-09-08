@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "<httpCookies domain=\"\" /> in Web.Config Is Not a Silver Bullet."
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-08-21"
 tags: ["asp.net","httpcookie","webconfig"]
 categories: ["asp-net"]
 migrated: "true"
-permalink: "/asp-net/httcookies-domain-web-config"
+permalink: "/asp-net/httcookies-domain-web-config/"
 ---
 If you are using `<httpCookies domain=".maskalik.com" />` element in your web.config you might think that all your cookies be default will have ".maskalik.com" domain set. I thought the same until I had to debug a weird problem where cookies were not being removed properly. 
 

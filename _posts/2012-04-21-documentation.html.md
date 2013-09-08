@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Factual Driver .NET Client Library Documentation"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-04-21"
 tags: ["asp.net","factual","factual-driver"]
 categories: ["factual-asp-net-driver"]
 migrated: "true"
-permalink: "/factual-asp-net-driver/documentation"
+permalink: "/factual-asp-net-driver/documentation/"
 ---
 #Update 08/07/2012 
 For latest documentation please see [factual-csharp-project][1] on github.

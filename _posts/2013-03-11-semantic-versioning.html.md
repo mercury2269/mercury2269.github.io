@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Semantic Versioning"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2013-03-11"
 tags: ["programming-conecepts"]
 categories: ["programming"]
 migrated: "true"
-permalink: "/programming/semantic-versioning"
+permalink: "/programming/semantic-versioning/"
 ---
 If you are using simple incremental versioning like v39, v40 and etc., you are missing out. In software world every aspect has been thoroughly thought through, has a meaning and adds some kind of value. One of those aspects is project versioning. Many companies I worked at didn't really give any thought on that subject and "homebrewed" some kind of simple incremental system. Most of the time that system would simply increment the version without giving any other information. A much better approach is to have versioning as a precise structure or rules to the project. Where all developers that work on the project understand and can differentiate between major, minor and patch releases.
 

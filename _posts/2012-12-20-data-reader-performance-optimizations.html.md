@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "ADO.NET Optimizing DataReader Performance"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-12-20"
 tags: ["ado.net","sqldatareader"]
 categories: ["ado-net"]
 migrated: "true"
-permalink: "/ado-net/data-reader-performance-optimizations"
+permalink: "/ado-net/data-reader-performance-optimizations/"
 ---
 Coming back to ADO.NET, I sometimes forget of different ways of accessing values from the SqlDataReader, cost of a type unboxing and which method is to use when. For example, here are different ways we can access values:
 

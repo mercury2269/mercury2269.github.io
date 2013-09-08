@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Cross Domain Javascript Heartbeat"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-11-12"
 tags: ["heartbeat","javascript"]
 categories: ["javascript"]
 migrated: "true"
-permalink: "/javascript/cross-domain-keep-me-alive"
+permalink: "/javascript/cross-domain-keep-me-alive/"
 ---
 If you are working with a heartbeat or keep alive from client side that goes between protocols (http to https) you will soon discover that it's not as straightforward as simply sending an ajax request due to cross domain browser policy restrictions. So if your https version of the site has a secure cookie when you send an ajax request from unsecure page your request won't have any cookies in the header since browser blocks this communications.
 

@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Service Broker: Scalable Web Service Calls From SQL Database"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-06-25"
 tags: ["asynchronous","trigger","sql-server","web-services","service-broker"]
 categories: ["sql-server-service-broker"]
 migrated: "true"
-permalink: "/sql-server-service-broker/scalable-webservice-calls-from-database"
+permalink: "/sql-server-service-broker/scalable-webservice-calls-from-database/"
 ---
 ##What can Service Broker do for you.
 You might not have heard of the Service Broker before, I know I haven't up until a month ago and after learning what it can do, I think all .NET developers should at least be familiar with it. It comes free with SQL Server and no additional installation is required. Some of the highlights for me are asynchronous triggers, reliability, offloading of long running batch jobs or activating external applications that might call for example Web Services. And some other great but rarely used features like Sql Server notifying the application layer when the data has changed which can be combined with a caching layer to make a very efficient and fast application. In fact list goes on.

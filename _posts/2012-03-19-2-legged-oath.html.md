@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Implementing 2 Legged OAuth with ASP.NET and Google Gdata Library"
 meta-description: "A quick class based on Google.Data.Client to sign 2 legged oauth requests."
-meta-keywords: ""
-publish-date: "2012-03-19"
 tags: ["asp.net","oauth","factual"]
 categories: ["asp-net"]
 migrated: "true"
-permalink: "/asp-net/2-legged-oath"
+permalink: "/asp-net/2-legged-oath/"
 ---
 Unfortunately Factual api's doesn't have a .net client library. But it's not a big deal, to get started all we need is to create a signed 2 legged oauth web request and hack query string together.
 

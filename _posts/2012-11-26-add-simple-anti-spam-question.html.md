@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "Adding a Simple Anti Spam Question to FunnelWeb"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-11-26"
 tags: ["funnelweb","spam"]
 categories: ["funnelweb"]
 migrated: "true"
-permalink: "/funnelweb/add-simple-anti-spam-question"
+permalink: "/funnelweb/add-simple-anti-spam-question/"
 ---
 I've been getting a ridiculous amount of spam on my blog and even though [FunnelWeb][1] checks with [akismet][2], a lot of spam messages are still getting through. Most spam comments are placed by bots that look for input fields and then submit garbage in hopes that it somehow becomes a link. We can make it a little harder for it by including a simple question that humans can easily answer, which should reduce amount of spam. 
 

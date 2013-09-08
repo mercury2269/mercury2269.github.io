@@ -1,12 +1,11 @@
 ---
+layout: post
 title: "ASP.NET: Passing Optional Parameters to WebMethod"
 meta-description: ""
-meta-keywords: ""
-publish-date: "2012-09-04"
 tags: ["asp.net","webmethod"]
 categories: ["asp-net"]
 migrated: "true"
-permalink: "/asp-net/webmethod-optional-arguments-with-json"
+permalink: "/asp-net/webmethod-optional-arguments-with-json/"
 ---
 WebMethods are still very convenient when you are working with WebForms and need a quick way to return json to your client javascript application. 
 
