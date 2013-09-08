@@ -23,15 +23,19 @@ title: Your New Jekyll Site
 
 
 <!-- Pagination links -->
-<div class="pagination">
+<div class="paginator">
   {% if paginator.previous_page %}
-    <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
+    {% if paginator.previous_page == 1%}
+      <a href="/" class="previous">Previous</a>
+    {% else %}
+      <a href="/{{ paginator.previous_page }}" class="previous">Previous</a>
+    {% endif %}
   {% else %}
     <span class="previous">Previous</span>
   {% endif %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="/page{{ paginator.next_page }}" class="next">Next</a>
+    <a href="/{{ paginator.next_page }}" class="next">Next</a>
   {% else %}
     <span class="next ">Next</span>
   {% endif %}

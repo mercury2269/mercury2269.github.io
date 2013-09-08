@@ -406,8 +406,9 @@ pre
 }
 
 span.date {
-    color: #666;
-    font-size: 14px;   
+    color: #777;
+    font-size: 12px;
+    display:block;
 }
 
 .entry-date .month, .entry-date .year
@@ -532,6 +533,11 @@ input[type="text"], textarea
 .paginator {
     color: #406618;
     font-weight: bold;
+}
+
+.page_number 
+{
+    margin: 30px;
 }
 
 .tags .tag 
