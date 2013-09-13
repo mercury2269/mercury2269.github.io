@@ -1,6 +1,12 @@
-name: Your New Jekyll Site
+name: Sergey Maskalik's Blog
 markdown: redcarpet
 pygments: false
 permalink: pretty
 paginate: 3
 paginate_path: ":num"
+assets:
+  sources:
+  - assets/js
+  - assets/css
+  js_compressor: uglifier
+  css_compressor: sass

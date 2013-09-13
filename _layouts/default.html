@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>{{page.title}}</title>
@@ -17,9 +17,8 @@
 	{% if page.permalink %}
 	   <link rel="canonical" href="{{page.permalink}}" />
 	{% endif %}
-    <link rel="stylesheet" type="text/css" href="/assets/css/base.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/theme.css" />
-    
+	
+    {% stylesheet theme %}
 </head>
     <body>
         <div class="wrap">
@@ -89,8 +88,6 @@
 				<p>Powered by Jekyll</p>
             </div>
         </div>
-        <script type="text/javascript" src="/assets/js/prettify.js"></script>
-        <script type="text/javascript" src="/assets/js/ready.js"></script>
-        <script type="text/javascript" src="/assets/js/site.js"></script>
+		{% javascript site %}
     </body>
 </html>
