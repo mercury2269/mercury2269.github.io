@@ -1,24 +1,28 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>{{page.title}}</title>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="language" content="english" />
-	<meta name="author" content="Sergey Maskalik&#39;s blog" />
-	<link href="http://blog.maskalik.com/feed" type="application/atom+xml" rel="alternate" title="Blog Feed" />
-	<link href="http://blog.maskalik.com/commentfeed" type="application/atom+xml" rel="alternate" title="Comments Feed" />
-	<link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-	{% if page.description %}
-	   <meta name="description" content="{{page.meta-description}}" />
-	{% endif%}
-	{% if page.keywords %}
-	   <meta name="keywords" content="{{page.meta-keywords}}" />
-	{% endif%}
-	{% if page.permalink %}
-	   <link rel="canonical" href="{{page.permalink}}" />
-	{% endif %}
-	
+    <title>{{page.title}}</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="language" content="english" />
+    <meta name="author" content="Sergey Maskalik&#39;s blog" />
+    <link href="http://blog.maskalik.com/feed" type="application/atom+xml" rel="alternate" title="Blog Feed" />
+    <link href="http://blog.maskalik.com/commentfeed" type="application/atom+xml" rel="alternate" title="Comments Feed" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+    {% if page.meta-description %}<meta name="description" content="{{page.meta-description}}" />{% endif%}
+    {% if page.meta-keywords %}<meta name="keywords" content="{{page.meta-keywords}}" />{% endif%}
+    {% if page.permalink %}<link rel="canonical" href="{{page.permalink}}" />{% endif %}
     {% stylesheet theme %}
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-27808855-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </head>
     <body>
         <div class="wrap">

@@ -1,9 +1,13 @@
 name: Sergey Maskalik's Blog
+url: http://blog.maskalik.com
+author: Sergey Maskalik
 markdown: redcarpet
 pygments: false
 permalink: pretty
 paginate: 3
 paginate_path: ":num"
+exclude: ['./assets']
+include: ['sitemap.xml']
 assets:
   sources:
   - assets/js
