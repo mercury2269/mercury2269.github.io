@@ -5,7 +5,7 @@ meta-description: "Simple module to allow users to stay logged for long periods 
 tags: ["asp.net","authentication","httpmodule","iidentity"]
 categories: ["asp-net"]
 migrated: "true"
-
+permalink: "/asp-net/custom-authentication-module/"
 ---
 I think it's awesome when sites allow you to stay logged in for long periods of time. As well as asking to re-login when I try to go to some pages where higher level security is needed like account or credit cart pages. It makes me feel warm and secure inside. 
 
