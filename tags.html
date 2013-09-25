@@ -17,7 +17,7 @@ sitemap:
       {% for post in posts %}
       	{% if post.title %}
 			<li class="nested">
-				<a href="{{ post.url }}" title="{{ post.excerpt }}">{{ post.title }} 
+				<a href="{{ post.url }}">{{ post.title }} 
 					<span>{{ post.date | date: '%d.%m.%y' }}</span>
 				</a>
 			</li>

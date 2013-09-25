@@ -8,7 +8,7 @@ categories:
 tags:
   - jekyll
   - cms
-  - "Amazon S3"
+  - amazon-s3
 ---
 ##A New, Fresh Look at Old and Boring
 I get excited when playing with frameworks that are different and challenging to a widely-accepted view on the subject at hand. One of those commonly accepted notions is that in order to build a content management system (CMS), you need a web server and a database. One guy who challenged that notion is Tom Preston-Werner who, in his original article ["Blogging Like a Hacker"](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html), set out to fix his frustrations with existing systems. He wrote: 
@@ -30,13 +30,14 @@ You can create your own simple HTML files and drop Liquid template variables to 
 
 Here is an example of a post page with template tags. 
 
+{% raw %}
     <div class='home entry'>
     	<h1>{{ page.title }}</h1>
 		<span class="date">{{ page.date | date_to_long_string }}</span>
     	{{ content }}
 		...
 	</div>
-
+{% endraw %}
 The page tags are also custom, and you can define your own. It's as flexible as you can imagine. Here is an example: 
 
     ---
@@ -57,7 +58,7 @@ Did I mention that it's super cheap to host a static site because you don't need
 How many times have you seen articles on Hacker News that, when you click on them, give you a nice 500-page error? That's because their Wordpress on the shared hosting cannot handle all the traffic, and it just bogs down. Well, with static sites hosted in the cloud, you get unlimited traffic potential out of the box. It will serve almost any amount of traffic you can throw at it. 
 
 ###Secure as it can get, no need to maintain 
-The beauty of the static site is that it's simple and doesn't have any programming logic. You don't need to download any patches or security updates—it's all just static HTML file goodness. Feels like we are back in 1996, and it's awesome!
+The beauty of the static site is that it's simple and doesn't have any programming logic. You don't need to download any patches or security updates-it's all just static HTML file goodness. Feels like we are back in 1996, and it's awesome!
 
 ###Static Site + CDN = FAST!
 Now to my favorite part. Being a performance freak, I have to admit that I decided to try it out because I knew that putting a CDN in front of the static site can make it really fast. I tried Amazon Cloud Front at first, but their speed was not very impressive. I was getting 600-700 ms response times, which is slower than the DiscountASP provider I was using before. I found [MaxCDN](http://www.maxcdn.com/), and they were just what I was looking for. I now see responses in the 50 ms or less range, and [www.webpagetest.org](http://webpagetest.org) reports [96/100](http://www.webpagetest.org/result/130923_BB_14G/1/details/) point results. It's incredibly fast!! Here is a proof:
@@ -72,7 +73,7 @@ Jekyll has a big ecosystem, and there are a lot of plugins that are available. O
 
 
 ###What about comments
-Aren't comments something that your platform needs? How do you go about that? Well, that's simple—you can install a 3rd party solution like [Disqus](http://disqus.com/), or you can roll your own with [Javascript and Windows Azure mobile services](http://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-with-data-html/). In this day and age, anything that requires a database can be sprinkled on the page with Javascript, and 3rd parties will host your data very cheaply. 
+Aren't comments something that your platform needs? How do you go about that? Well, that's simpleâ€”you can install a 3rd party solution like [Disqus](http://disqus.com/), or you can roll your own with [Javascript and Windows Azure mobile services](http://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-with-data-html/). In this day and age, anything that requires a database can be sprinkled on the page with Javascript, and 3rd parties will host your data very cheaply. 
 
 
 ##Extras

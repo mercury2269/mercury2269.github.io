@@ -78,7 +78,7 @@
                             <div class="section">
                                 <h4>RECENT POSTS</h4>
                                 <ul>
-                                    {% for post in site.posts limit: 10 offset:1 %}
+                                    {% for post in site.posts limit: 10 %}
                                          <li>
                                             <span class="datebox">{{ post.date | date_to_string }}</span><br />
                                             <a class="title" href="{{post.url}}">{{ post.title }}</a>
