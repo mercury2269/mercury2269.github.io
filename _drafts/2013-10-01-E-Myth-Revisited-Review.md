@@ -10,4 +10,15 @@ I've been always wondering how the majority of successful companies with poorly 
 ## From Technitian To Entrepreneuer
 This book answered a lot of questions about why my past ventures have misirably failed. First of all, when someone like me, a technitian, starts a business he or she has a wrong mindset. A well run business has 3 equally important parts: entreprenureal, managerial and technical. Entreprenureal is where you see opportunities, a vision, you are able to figure out what is missing and can anticipate future. Managerial is where you make sure everything is in order, things get done and the system is followed perfectly. And technical is where you build the actual product. When a developer starts working a product he focuses mostly on the technical part, the only thing that he sees is that perfect product, not realizing that in order for business to succeed you need all 3 parts. So you spent all that time and energy later to realize that your vision was correctly wrong and either nobody needs your product, or your strategy is poorly executed. 
 
-Unforunately 
+**If you want to have a successful business you need to spend have all 3 parts equal.**
+
+What that means is that I must learn how to become entreprenuer and manager if I want a chance for my future business to succeed.
+
+## Work On The Business Rather Than In
+
+
+
+## Applying yourself to learning something new and challenging
+
+
+## You are no longer a developer, you are a business person
