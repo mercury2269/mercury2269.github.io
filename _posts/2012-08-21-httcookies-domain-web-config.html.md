@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "<httpCookies domain=\"\" /> in Web.Config Is Not a Silver Bullet."
+title: "Setting Domain in HttpCookies Element in Web.Config Is Not a Silver Bullet."
 meta-description: ""
 tags: ["asp.net","httpcookie","webconfig"]
 categories: ["asp-net"]
