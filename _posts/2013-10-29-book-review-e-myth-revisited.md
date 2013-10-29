@@ -1,3 +1,13 @@
+---
+layout: post
+title: "Book Review: E-Myth Revisited"
+meta-description: "E-Myth revisited is a book with many great concepts that are so easily overlooked by new entrepreneurs."
+meta-keywords: "E-Myth Revisited,book review"
+categories: 
+  - book-review
+tags:
+  - entrepreneur
+---
 
 As a part of my transition from "wantrepreneuer" to entrepreneur, I've
 been indulging in a great amount of business and motivational content. While on my way to work, I was listening to one of my favorite podcasts, [The Entrepreneur On Fire][1]. One of the guests recommended a book that he said completely shifted his mindset about business and put all the pieces together. It got me interested, so I picked up a copy from audible.com. This post is dedicated to the review of that audio book, [The E-Myth
