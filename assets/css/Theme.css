@@ -587,3 +587,14 @@ input[type="text"], textarea
 {
     margin-top: 0;
 }
+
+blockquote { 
+	background-color: #eeeeee;
+	margin: 0 0 15px;
+	padding: 15px 20px;
+	border-left: 7px solid rgba(102,128,153,0.075)
+}
+
+blockquote p {
+	margin: 0;
+}
