@@ -7,10 +7,12 @@ sitemap:
 ---
 <!-- categories -->	
 
+
+
 <h1>Tagged posts:</h1>
 
 {% for tag in site.tags %}
-<div class="box">
+<div id="{{ tag | first | cgi_escape }}" class="box">
 	<h2>{{ tag | first }}<a name="{{ tag | first | cgi_escape }}"></a></h2>
 	<ul class="postList">	
 	{% for posts in tag %}
@@ -27,5 +29,18 @@ sitemap:
 </div>
 {% endfor %}
 	
+<script type="text/javascript">
+	var hash = window.location.hash.substring(1);
+	if(hash) {
+		highlightTag(hash);
+	}
 
+	function highlightTag(tag) {
+		var element = document.getElementById(tag);
+		if(element) {
+			element.style.backgroundColor = "#eeeeee";
+		}
+		
+	}
+</script>
 
