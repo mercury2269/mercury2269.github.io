@@ -1,3 +1,15 @@
+---
+layout: post
+title: "Getting Serious About JavaScript"
+meta-description: "Why you should learn JavaScript today"
+meta-keywords: "JavaScript learning, JavaScript resources, JavaScript books, JavaScript Open Source Libraries to read"
+categories: 
+  - javascript
+tags:
+  - javascript
+  - learning
+  - book-recommendations
+---
 ##Why Should I Care About JavaScript?
 If you want to build next generation platforms or web applications you have to get serious about JavaScript. Rich user interfaces, or Single Page Applications, provide a much better user experience and give products an edge over competition. Many new applications like DropBox, Trello, Windows Azure and many others are a great example of amazing user experience. In addition, JavaScript is already very widely used on the server side as well. It's incredably fast, asynchronous out of the box, and is a perfect backend for your single page applications. Finally, it has a huge ecosystem with almost as [many NPM][1] packages than the largest platform, and catching up really fast. As we've seen before where community goes that's where the next most widely used platform will be. 
 
