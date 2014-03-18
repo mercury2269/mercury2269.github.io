@@ -6,6 +6,7 @@ meta-keywords: .net, c#, asp.net, mvc, developer, programming, blog
 sitemap:
   priority: 1
   changefreq: monthly
+permalink: "/aboutme/"
 ---
 
 ![Sergey Maskalik](/uploads/2014/DSC07624.jpg)
