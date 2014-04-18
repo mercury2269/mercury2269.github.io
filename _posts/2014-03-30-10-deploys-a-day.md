@@ -4,7 +4,7 @@ title: "10 Deploys A Day"
 meta-description: "Rapid software delivery brings quality, rapid feedback, and competitive edge."
 meta-keywords: "Continous delivery, Continuous deployments, the phoenix project, gene kim, high performance organizations"
 categories: 
-  - continuous delivery
+  - continuous-delivery
 tags:
   - continuous delivery
 ---
@@ -21,7 +21,7 @@ First, let's dive deeper into the normal software delivery practice of an averag
  - Product managers will come up with arbitrary due dates without doing technical capacity planning, making promises that we cannot keep. And in result, when a due date comes, product is rushed with many shortcuts taken, which results in lower quality and more fragile applications, which means more technical debt and *unplanned* worked later.
  - Security is not even in the picture because new features are not getting to market quickly enough. 
  - Technical debt continues to get stock piled and is rarely paid off. Like financial interest, it grows over time until most of the time is spent on just paying off the interest in the form of unplanned work. 
- - Deployments are not automated and it takes long time to manually deploy. Therefore deployments are a lot less frequent, that means a huge number of features are being deployed at once. That means finished work does not make it into production for months, sometimes years (scary), and that means no rapid feedback on performance, feature, or business value. Comparing that to the manufacturing plant, where  at the bottle neck station you have a stock pile of work, and you have to stop everything just to catch up. At that point you cannot give any feedback because other stations already finished their work, and it's very costly to change already made stuff (unplanned work) and the solution is lower quality product (technical debt).
+ - Deployments are not automated and it takes long time to manually deploy. Therefore deployments are a lot less frequent, that means a huge number of features are being deployed at once. That means finished work does not make it into production for months, sometimes years (scary), and that means no rapid feedback on performance, adoption, or business value. Comparing that to the manufacturing plant, where at the bottleneck station you have a stock pile of work, and you have to stop everything just to catch up. At that point you cannot give any feedback because other stations already finished their work, and it's very costly to change already made stuff (unplanned work) and the solution is lower quality product (technical debt).
  - Due to lack of automated testing, companies have to deploy even more infrequent since it takes an army of QA engineers to regression test the entire application, and it becomes even longer as more features are deployed. 
  - Failed features don't get pruned, but rather just left to rot and accumulate more security, technical, and maintance debt. 
 
