@@ -6,7 +6,7 @@ pygments: false
 permalink: pretty
 paginate: 3
 paginate_path: ":num"
-exclude: ['./assets']
+exclude: ['./assets','publish.bat']
 include: ['sitemap.xml']
 assets:
   sources:
