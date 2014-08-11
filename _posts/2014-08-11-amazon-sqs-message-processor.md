@@ -16,6 +16,8 @@ There are mission critical pieces in any business application that might call ex
 
 > Processes, servers, NICs, switches, local and wide area networks can all fail, and the resulting economic consequences are real. ... The consequences of these outages range from increased latency and temporary unavailability to inconsistency, corruption, and data loss.
 
+Therefore, if we want to have a reliable communication with external services we need to implement some kind of a retry mechanism that can redeliver messages and recover from faults.
+
 ##Solving Guaranteed Delivery
 Message Queue is one of the solution that can address this problem and guarantee delivery. Rather than calling an external API within the application process, like a web request, you place a message into the reliable and durable message queue that guarantees that your message will be delivered to the consumer at least once. Since putting a message on the queue is usually a fast operation, it also speeds up your application performance. Most message queues guarantee delivery by providing some sort of a mechanism of acknowledging if message has been received by the consumer. And if consumer doesn't respond after a period of time the message gets returned into the queue so it can get processed again. This basically guarantees that a message will get delivered or retried for a certain pre-configured number of times. 
 
