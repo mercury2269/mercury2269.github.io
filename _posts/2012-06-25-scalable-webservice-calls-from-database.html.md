@@ -134,9 +134,9 @@ What do I mean by external activation program... Well that's the program that li
 
 After you install the service, you will need to read documentation and edit the config file. It's pretty trivial to do, you will need to specify your database name where activation queue is, your targetqueue name and which executable file to run when a message comes to the targetqueue. If you are having problems take a look at the error log, that helped me to get it up and running. Once you have configuration done, start the service and it will run if there are no configuration issues. Also keep in mind that service is only designed to work in integrated security mode.
 
-But before you start the service we need to create an app that will process our messages and notify the queue that we have successfully processes so it can end the conversation and de-queue the message. I will spare showing a complete source code, you can see it in the attached sample. But highlights are:
+But before you start the service we need to create an app that will process our messages and notify the queue that we have successfully processes so it can end the conversation and de-queue the message. Here are the highlights of that app:
 
-It's a console application that has a `while (true)` loop it uses ADO.NET to send Service Broker Command to RECEIVE message on the specified queue. That takes a message, but still keeps it on the queue until commit is called
+It's a console application with a main `while (true)` loop that uses ADO.NET to send Service Broker Command to RECEIVE message on the specified queue. It receives a message, but still keeps it on the queue until commit is called.
 
     ...
     broker.tran = broker.cnn.BeginTransaction();
@@ -166,9 +166,9 @@ It's a console application that has a `while (true)` loop it uses ADO.NET to sen
     broker.tran.Commit();
     ...
 
-Basically the transaction only gets committed when we process message and that takes a message of the queue hence the reliability of the message processing, remember it is important to end conversations on both ends.
+Basically the transaction only gets committed when we process message and that deletes a message of the queue hence the reliability of the message processing. Also remember it is important to end conversations on both ends.
 
-When reply is sent from an external .NET application we need to process it inside the SQL Server. For this we will use an internally activated service which will call a stored procedure which will simply take that message, parse xml and insert it into a table. 
+When reply is sent from an external .NET application we need to process it inside the SQL Server. For this we will use an internally activated service which will call a stored procedure which will simply take that message, parse xml and insert it into a table.
 
     CREATE PROCEDURE ProcessResponseMessages
     AS
