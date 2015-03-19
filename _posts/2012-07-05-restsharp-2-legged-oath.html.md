@@ -3,7 +3,7 @@ layout: post
 title: "2 Legged OAuth with RestSharp"
 meta-description: ""
 tags: ["restsharp","oauth","asp.net"]
-categories: ["asp-net"]
+categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/restsharp-2-legged-oath/"
 ---

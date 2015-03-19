@@ -5,8 +5,6 @@ meta-description: "Rapid software delivery brings quality, rapid feedback, and c
 meta-keywords: "Continous delivery, Continuous deployments, the phoenix project, gene kim, high performance organizations"
 categories: 
   - continuous-delivery
-tags:
-  - continuous delivery
 ---
 
 This post was inspired by [Gene Kim][1]'s talk on continuous delivery and his eye opening book [The Phoenix Project][2]. 

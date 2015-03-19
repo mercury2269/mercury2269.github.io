@@ -3,7 +3,7 @@ layout: post
 title: "Setting Domain in HttpCookies Element in Web.Config Is Not a Silver Bullet."
 meta-description: ""
 tags: ["asp.net","httpcookie","webconfig"]
-categories: ["asp-net"]
+categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/httcookies-domain-web-config/"
 ---

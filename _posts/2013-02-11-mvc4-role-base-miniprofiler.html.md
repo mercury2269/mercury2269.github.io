@@ -3,7 +3,7 @@ layout: post
 title: "Displaying MiniProfiler For Logged In Developers with MVC4"
 meta-description: ""
 tags: ["asp.net-mvc-4","miniprofiler"]
-categories: ["asp-net"]
+categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/mvc4-role-base-miniprofiler/"
 ---

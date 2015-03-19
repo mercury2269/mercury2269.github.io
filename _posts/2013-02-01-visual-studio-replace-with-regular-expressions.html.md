@@ -3,7 +3,7 @@ layout: post
 title: "Replace With Regular Expressions in Visual Studio"
 meta-description: ""
 tags: ["regex"]
-categories: ["asp-net"]
+categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/visual-studio-replace-with-regular-expressions/"
 ---

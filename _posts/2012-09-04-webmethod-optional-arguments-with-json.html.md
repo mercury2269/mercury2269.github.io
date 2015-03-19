@@ -3,7 +3,7 @@ layout: post
 title: "ASP.NET: Passing Optional Parameters to WebMethod"
 meta-description: ""
 tags: ["asp.net","webmethod"]
-categories: ["asp-net"]
+categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/webmethod-optional-arguments-with-json/"
 ---

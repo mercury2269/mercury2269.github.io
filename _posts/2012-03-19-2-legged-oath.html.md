@@ -3,7 +3,7 @@ layout: post
 title: "Implementing 2 Legged OAuth with ASP.NET and Google Gdata Library"
 meta-description: "A quick class based on Google.Data.Client to sign 2 legged oauth requests."
 tags: ["asp.net","oauth","factual"]
-categories: ["asp-net"]
+categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/2-legged-oath/"
 ---

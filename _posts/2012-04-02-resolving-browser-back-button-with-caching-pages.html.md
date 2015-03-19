@@ -3,7 +3,7 @@ layout: post
 title: "Prevent back button to serve cached content with ASP.NET"
 meta-description: "How to tell browsers not to cache pages when clicking back button."
 tags: ["asp.net","browser-cache"]
-categories: ["asp-net"]
+categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/resolving-browser-back-button-with-caching-pages/"
 ---

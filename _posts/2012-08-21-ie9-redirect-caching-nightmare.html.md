@@ -3,7 +3,7 @@ layout: post
 title: "IE9 Redirect Caching Feature Might Cause Frustration"
 meta-description: ""
 tags: ["ie9","redirect","asp.net","browser-cache"]
-categories: ["asp-net"]
+categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/ie9-redirect-caching-nightmare/"
 ---

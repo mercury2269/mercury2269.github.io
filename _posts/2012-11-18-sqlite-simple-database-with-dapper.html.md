@@ -3,7 +3,7 @@ layout: post
 title: "SQLite + Dapper = Simple Data Access Layer"
 meta-description: ""
 tags: ["dapper","sqlite","asp.net"]
-categories: ["asp-net"]
+categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/sqlite-simple-database-with-dapper/"
 ---

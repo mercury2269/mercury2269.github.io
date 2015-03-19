@@ -3,7 +3,7 @@ layout: post
 title: "JSON.NET Implementing Custom Serialization"
 meta-description: ""
 tags: ["asp.net","json.net","serialization"]
-categories: ["asp-net"]
+categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/json-net-implement-custom-serialization/"
 ---

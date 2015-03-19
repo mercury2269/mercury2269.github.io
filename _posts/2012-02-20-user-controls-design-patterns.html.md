@@ -3,7 +3,7 @@ layout: post
 title: "Sprinkle some design into ASP.NET User Controls"
 meta-description: "Simple techniques to make ASP.NET User Controls independent unit of work."
 tags: ["asp.net","patterns","user-control"]
-categories: ["asp-net"]
+categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/user-controls-design-patterns/"
 ---

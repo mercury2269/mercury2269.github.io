@@ -3,7 +3,7 @@ layout: post
 title: "Ensuring Variables Are Atomic or Thread Safe"
 meta-description: ""
 tags: ["thread-safety"]
-categories: ["asp-net"]
+categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/primitive-types-thread-safe-automic/"
 ---

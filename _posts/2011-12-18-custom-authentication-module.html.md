@@ -3,7 +3,7 @@ layout: post
 title: "Building persistent identity and secure authentication module in ASP.NET"
 meta-description: "Simple module to allow users to stay logged for long periods of time as well as having a separate secure session."
 tags: ["asp.net","authentication","httpmodule","iidentity"]
-categories: ["asp-net"]
+categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/custom-authentication-module/"
 ---

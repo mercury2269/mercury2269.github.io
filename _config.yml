@@ -8,6 +8,7 @@ paginate: 3
 paginate_path: ":num"
 exclude: ['./assets','publish.bat']
 include: ['sitemap.xml']
+encoding: UTF-8
 assets:
   sources:
   - assets/js

@@ -3,7 +3,7 @@ layout: post
 title: "ADO.NET Optimizing DataReader Performance"
 meta-description: ""
 tags: ["ado.net","sqldatareader"]
-categories: ["ado-net"]
+categories: ["ado.net"]
 migrated: "true"
 permalink: "/ado-net/data-reader-performance-optimizations/"
 ---
