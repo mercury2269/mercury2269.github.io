@@ -23,17 +23,17 @@ I wrote a series of tests that test each scenario in the context of:
 
 The results are as follows: 
 
-###Getting one row over 100k times:
+####Getting one row over 100k times:
 ![one row][1]
 
 There is really **no difference** or any significant performance advantage when accessing **one row**. When you run the test multiple times numbers change slightly and there is no clear winner. So we can say if you are only getting one record you can use any one of those accessors and cast as you please.
 
-###Getting 20k records over 1000 times
+####Getting 20k records over 1000 times
 ![data reader multiple rows][2]
 
 Typed accessor proves to be the fastest. Right behind is casting by using column orderinal accessor. Casting with column name is probably 30% slower than casting typed casting. And finally **if we call reader.GetOrdinal once and cache the column position we get as fast performance as typed accessor alone**. 
 
-##Summary 
+###Summary 
 If your query returns only one row or small amount of rows it doesn't matter which method you use. It would only make sense if you have large number of rows and using reader.GetOrdinal to cache column number and then using typed accessors would yield the best performance.
 
 If you want to see for yourself you can download the [source code][3] and run it against the AdventureWorks database.

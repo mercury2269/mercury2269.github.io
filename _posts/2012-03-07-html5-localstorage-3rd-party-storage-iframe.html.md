@@ -7,21 +7,21 @@ categories: ["dom"]
 migrated: "true"
 permalink: "/dom/html5-localstorage-3rd-party-storage-iframe/"
 ---
-##Summary
+###Summary
 
 You have probably seen stackoverflow's 3rd party authentication in action: when you visit one of their sister sites that you have never visited before it automatically knows who you are. That's possible with using 3rd party domain to store global encrypted session information and cross domain communication mechanism. For storage we can use either cookies and html5 localStorage and for communication we will look at using postMessage. 
 
 Without getting into the security aspect of the global authentication, I want to show the cross domain communication mechanism that makes this possible. We will use **unsecure** personalization data, like user's first name for demonstration purposes. 
 
-###Browser support for localStorage
+####Browser support for localStorage
 ![localStorage browser support][2]
 
 Most modern browsers support localStorage except IE6 and IE7, pretty much exact same storage with postMessage
 
-###Browser support for postMessage:
+####Browser support for postMessage:
 ![postMessagebrowsersuport][3]
 
-###Browser Usage
+####Browser Usage
 That brings us to the question, how many users are still using IE6 and IE7 and after we look at the figures decide if we can leave with those numbers or go a painful route. 
 
 As of February 2012 IE6 and IE7 are used by [3.6%][4] of all users, and that number decreasing pretty fast, it dropped 15% from previous months which was at 4.2%.  
@@ -31,7 +31,7 @@ It will probably take you 3 time as long to make it work for those 3.6% of users
 
 When I first started I was actually going to use cookies for storage, but later on I've discovered that IE blocks 3rd party content and you have go your way out to a [pretty complex workaround][6]. And there is also a reliability issue I sometimes experienced. 
 
-## Storing data with 3rd party domain
+### Storing data with 3rd party domain
 
 We'll take a look at authentication example. Once you login to bob.com, it stores a some piece of information on frank.com storage. So when you visit another site bobsister.com, it can also read information from frank.com as long as frank has bobsister.com in the list of valid sites. This is of course is not designed to be secure, but it is also possible by encrypting messages stored in localStorage. Making it secure is a topic for another blog post.
 
@@ -133,7 +133,7 @@ And a code behind that check's if request came from trusted domain
         }
     }
 
-##Reading data from 3rd party domain
+###Reading data from 3rd party domain
 
 To read data from 3rd party we create an iframe similar to the write example.
 
@@ -271,7 +271,7 @@ The final piece is to subscribe our client side page page to receive Alice's nam
 I also learned the localStorage is based on the domain, so if you are going to be reading from secure pages make sure that you store and read from https domain because localStorage is different for secure and unsecure domains. 
 
 
-## And there you have it.
+### And there you have it.
 Now you know how cross domain storage/communication is achieved with modern browsers. Let me know if you have any questions, and of course feedback is always greatly appreciated!
 
 Cheers

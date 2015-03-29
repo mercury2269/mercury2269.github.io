@@ -50,7 +50,7 @@ Fortunately, EF does provide a way to update an existing object from a detached 
 
 Here is the first way you can do it:
 
-##Querying Database First And Updating Tracked Object
+###Querying Database First And Updating Tracked Object
 
 	using(var db = new StoreDbContext()) 
 	{
@@ -72,7 +72,7 @@ After querying a database and finding a record, we know that EF is already track
 
 That works, but requires an extra database call to get an existing record. There is also a way to do that without an extra query.
 
-##Not Performing An Extra Database Call And Checking Local Context
+###Not Performing An Extra Database Call And Checking Local Context
 
 There are times when you know for fact an entity is already in the database. An example would be when a database generated id of your object is not set to zero or default. In that situation you can save an extra call by querying the local context first. If an entity does exist in the local context you perform a similar update with attachedEntry.CurrentValues.SetValues, and if it does not exist, you can modify a state of your detached object to modified, which would attach the object and update the database. 
 
@@ -105,7 +105,7 @@ For example, when I know that the cart id is not zero, that means it already exi
 
 There is a small difference when you query the database first. EF knows which values have been modified an only those specific value. On the other hand, when you are blindly attaching modified entity, EF doesn't know what fields have changes and performs an update on all fields. 
 
-##It Works, But Not Fully...
+###It Works, But Not Fully...
 
 When you call CurrentValues.SetValues(newCart) it will update all scalar properties on your newCart object and set them to modified. However, navigation properties would not get the same respect. As of today EF does not support of full object graph merging, and leaves that for you to manage on your own. So if you have newCart.Customer navigational property it would not get updated. It's [the second most requested feature](https://entityframework.codeplex.com/workitem/864) for EF at the moment, so I think they would add it in the future release.
 

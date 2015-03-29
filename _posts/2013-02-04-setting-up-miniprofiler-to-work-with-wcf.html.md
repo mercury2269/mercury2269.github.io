@@ -11,7 +11,7 @@ First of all MiniProfiler is awesome! And lucky for me some smart people made it
 
 There is no Nuget package for MiniProfiler.WCF library so you have to download [source code][1] from GitHub and compile it under Release configuration. Then take MiniProfiler.dll and MiniProfiler.WCF dlls and place them in your common folder where you keep your external libraries.  
 
-##Service setup
+###Service setup
 Next, in your WCF Service project register wcfMiniProfilerBehavior extensions under extensions element (you can find out the version number with right click and going to properties on the MiniProfiler.Wcf.dll file. )
 
     ...
@@ -36,7 +36,7 @@ And in your WCF Service project you need to add the following endPointBehavior u
 Oh yea and don't forget to reference a MiniProfiler.Wcf in your Service Project. 
 You will need to register MiniProfiler assembly in other projects where the actual profiling is going to take place, for example your data layer would have a reference to that file and wrap a connection with a dbprofiled connection, for more setup details see the [official site][2].
 
-##Client Setup
+###Client Setup
 If you are using proxies for your client setup you would register the following configuration in your client's web.config. 
 
       <system.serviceModel>

@@ -7,23 +7,23 @@ categories: ["sql-server-service-broker"]
 migrated: "true"
 permalink: "/sql-server-service-broker/scalable-webservice-calls-from-database/"
 ---
-##What can Service Broker do for you.
+###What can Service Broker do for you.
 You might not have heard of the Service Broker before, I know I haven't up until a month ago and after learning what it can do, I think all .NET developers should at least be familiar with it. It comes free with SQL Server and no additional installation is required. Some of the highlights for me are asynchronous triggers, reliability, offloading of long running batch jobs or activating external applications that might call for example Web Services. And some other great but rarely used features like Sql Server notifying the application layer when the data has changed which can be combined with a caching layer to make a very efficient and fast application. In fact list goes on.
 
-### Asynchronous triggers
+#### Asynchronous triggers
 First of all triggers in the SQL database are synchronous and they do an implicit lock on the database tables when an operation on the table is happening. I'm not a big fan of triggers myself, but there are time when you have no choice but use them. For example if you have no control when table gets update from application layer and you need to have some sort of processing when record is modified, deleted or added. So Service Broker solves this problem by creating a message queue for items that need to be processed instead of processing them right away. That in result creates asynchronous triggers because messages are sent to be processed when resources are available. 
 
-### Reliable messaging
+#### Reliable messaging
 
 Another great benefit of Service Broker is that it provides a reliable mechanism of a messaging queue. Message only gets de-queued when a processing application processes a message and commits a transaction and message can be taken off the queue. If your SQL Server shuts down all your messages stay in the queue as it works just like any other sql table. If processing fails, the message never leaves the queue and will get retried shortly.
 
-### External activation
+#### External activation
 External activation might sound alien right now, but it's not hard to understand. Basically when message arrives at the service broker queue you will need to provide an activation (or what is going to process that message). There are two types of activation internal or external. Internal activation is a stored procedure or a stored procedure calling a SQLCLR, it's basically everything that happens inside of SQL server instance. External activation is when SQL notifies an external process (completely outside of sql) that some change is waiting to be processed. What external activation allows is to offload tasks that don't belong inside of SQL server like calling Web Services or some kind of long running batch processes that communicate with other systems. In addition external activation does not require deployment of .NET assemblies inside of SQL Server and does not require SQLCLR.
 
-### Other
+#### Other
 There are a lot of other features like a reliable replication between SQL Servers, scalable distributed messaging queues and many others. Many of which will most likely be handles by a SQL DBA. What got me started on Service Broker is figuring out how to asynchornously call Web Services from a database trigger and I think it does an awesome job of doing that. Also while reading the [Pro Service Broker book][1] I found out that it can do manage code notifications that can for example invalidate cache in your application layer.
 
-##No more theory, let's implement asynchornous triggers calling web services!
+###No more theory, let's implement asynchornous triggers calling web services!
 
 Service Broker is a part of the Microsoft SQL Server and doesn't need to be installed separately, just enabled. like this: 
 
@@ -228,7 +228,7 @@ Finally we alter our InitiatorQueue to turn on internal activation with provided
     	EXECUTE AS OWNER
     )
 
-##Final words
+###Final words
 
 It seems like a lot of configuration and setup, and it is. However what you do get is offloading of processing of your message outside of SQL Server which can call something like Web Services. You will also get reliability and scalability that service broker offers. And you don't have to deploy assemblies into SQL and there is many other things you can do like paralel processeing, conversetion group locking and a ton of other things that you will need to read for yourself in [Pro SQL Service Broker 2008 book][1]. Good luck! 
 

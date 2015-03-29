@@ -7,17 +7,17 @@ categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/sqlite-simple-database-with-dapper/"
 ---
-##Summary
+###Summary
 SQLite is one of the little databases that you can use in your project when you don't want to have a full blown database and want something simple, quick and awesome. It's very easy to distribute or share with your team since it's just a single file and can be checked into source control. Could be used as a development database, one off database for your desktop applications or just about anything else. It's definitely nice to keep in your development tool belt. 
 
-##Installation
+###Installation
 There is none, just add reference to SQLite C# drivers and it will create a database for your on first run. Simplest way is to go to Nuget package manager console and run: 
 
     Install-Package System.Data.SQLite
 
 This will install both versions for x86 and x64 so you can build it for any CPU. There are also specific versions as well in case if you don't want extra files `Install-Package System.Data.SQLite.x86 or System.Data.SQLite.x64`.
 
-##Model
+###Model
 In our sample we'll save and retrieve customers from the database so we'll create a folder "Model" and add a Customer class which will represent our data model. 
 
     namespace SQLiteDemo.Model
@@ -31,7 +31,7 @@ In our sample we'll save and retrieve customers from the database so we'll creat
         }
     }
 
-##Simple Data Layer
+###Simple Data Layer
 For this demo I'll use a console application and for simplicity sake I'll create a folder "Data" for data access layer. In you production application you will most likely want to put your data access layer into a separate project. 
 
 We'll also use a repository pattern for our Data Access Layer(DAL) since it's the most commonly used and easily to understand. 
@@ -57,7 +57,7 @@ We'll add an interface `ICustomerRepository` which will have two methods to save
         }
     }
 
-##Using Dapper as our simple Object-relational mapping (ORM)
+###Using Dapper as our simple Object-relational mapping (ORM)
 Dapper is easy to use, fast and fits well for our simple data access layer. It has a simple API on top of already familiar SQL statements.
 
 In your package manager console
@@ -121,7 +121,7 @@ To retrieve customer we first check if database file exists first and then let d
 
 And there you have it, an easy way to have a single file database with a simple ORM in your repository layer. 
 
-###Source code
+####Source code
 Here is the link to the source code if you would like to run the solution and try it for yourself. [Source Code][1]
 
 

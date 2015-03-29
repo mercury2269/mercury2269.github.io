@@ -7,7 +7,7 @@ categories: ["sql-server-service-broker"]
 migrated: "true"
 permalink: "/sql-server-service-broker/queue-health-status-dashboard/"
 ---
-#What am I trying to solve.. 
+###What am I trying to solve.. 
 
 *If you are not familiar with Service Broker you can still use this as an example for Knockoutjs and ASP.NET Webmethods.*
 
@@ -15,7 +15,7 @@ The biggest pain point with Service Broker (SB) is how long it takes to understa
 
 In this post we will have some fun building a color coded status page which will show status of our queues, events, messages and queue monitors. It should be as easy as glancing at the screen and if anything is red that means there is a problem. As a bonus you can also add internal activation on your own. 
 
-## Create a health status query
+### Create a health status query
 
     SELECT * FROM 
     (
@@ -51,7 +51,7 @@ To summarize we get all queues in the current database with their message count 
 
 This gives us some information, but you still need to know if there is something wrong, that's where we put knockoutjs to work and color code our results.
 
-## Create View Model
+### Create View Model
 
     var SM = SM || {};
     SM.QueueHealthModel = function () {
@@ -85,7 +85,7 @@ And required data function
         }
     };
 
-##Webmethod
+###Webmethod
 Use your favorite data access tool and return an array of data transfer objects
  
 
@@ -95,7 +95,7 @@ Use your favorite data access tool and return an array of data transfer objects
             return MyRepository.GetAllQueueHealthStatus();
         }
 
-##Html 
+###Html 
 Finally we'll add our html markup with knockout bindings
 
     <!-- Errors -->
@@ -121,7 +121,7 @@ Finally we'll add our html markup with knockout bindings
         </tbody>
     </table>
 
-##Color utility functions
+###Color utility functions
 
 To break down formatting: 
 
@@ -205,7 +205,7 @@ Format color functions used in knockoutjs bindings. We use immediate function to
         };
     } ());
 
-##Error handling and loading indicator
+###Error handling and loading indicator
 There is an awesome jquery ajax global event handler that will catch all ajax exceptions, it's especially useful when you have many queries running on the page and you don't want to add error handling logic to each one.
 
     $('body').ajaxError(function (event, request) {
@@ -220,6 +220,4 @@ There is also one for loading we can use like this.
         $(this).fadeOut('fast');
     });
 
-That's it. Now when something is wrong with your service broker, it's very easy to just glance at the screen to understand if something is wrong. You can get more creative and add timeout polling so you can watch how service broker works in real time. And you can also add tool tips on how to resolve issues and maybe even buttons that will fix issues directly from dashboard. Sky is the limit, and this is a good start in the right direction in my opinion. 
-
-Cheers
+That's it. Now when something is wrong with your service broker, it's very easy to just glance at the screen to understand if something is wrong. You can get more creative and add timeout polling so you can watch how service broker works in real time. And you can also add tool tips on how to resolve issues and maybe even buttons that will fix issues directly from dashboard. Sky is the limit, and this is a good start in the right direction in my opinion.
