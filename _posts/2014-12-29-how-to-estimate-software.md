@@ -1,9 +1,9 @@
-﻿---
+---
 layout: post
 title: "How to Estimate Software"
 meta-description: ""
 meta-keywords: "Software estimation, custom software estimation, application development quote, app cost, software build cost"
-categories: 
+categories:
   - development practice
 tags:
   - estimation
