@@ -18,7 +18,7 @@ There may also be many times during the project when you forgot to mention or th
 
 It's not always necessary to know everything up front, but it is important to anticipate large features so that your friend can design a plan that will accommodate changes later.
 
-Steve McConnel, in his great book "œ[Rapid Development](http://www.amazon.com/gp/product/1556159005/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1556159005&linkCode=as2&tag=sermassblo-20&linkId=W44AZRHKZEOBSTMU)", gives a great summary of the software estimation story that all customers and managers must understand:
+Steve McConnel, in his great book "[Rapid Development](http://www.amazon.com/gp/product/1556159005/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1556159005&linkCode=as2&tag=sermassblo-20&linkId=W44AZRHKZEOBSTMU)", gives a great summary of the software estimation story that all customers and managers must understand:
 
 > The basic software-estimation story is that software development is a process of gradual refinement. You begin with a fuzzy picture of what you want to build and then spend the rest of the project trying to bring that picture into clearer focus. Because the picture of the software you are trying to build is fuzzy, the estimate of the time and effort needed to build it is fuzzy, too. The estimate can come into focus only along with the software itself, which means that software-project estimation is also a process of gradual refinement.
 
