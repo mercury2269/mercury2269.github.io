@@ -1,0 +1,340 @@
+/* Global Settings */
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #406618;
+  border: none;
+}
+h1 { 
+    font-size: 3.4rem;
+    line-height: 1.2em;
+    letter-spacing: -2px;
+    text-indent: -3px;
+}
+h2 { 
+    font-size: 2.8rem;
+    line-height: 1.2em;
+    letter-spacing: -1px;
+    text-indent: -2px;
+}
+
+h3 {
+    font-size: 2.2rem;
+    line-height: 1.2em;
+    letter-spacing: -1px;
+    text-indent: -1px;
+    font-weight: normal;
+}
+
+body {
+    /*font-size: 16px;
+    line-height: 25px;*/
+    font-size: 1.7em;
+    line-height: 1.6em;
+    color: #383838;
+}
+
+blockquote {
+  background-color: #eeeeee;
+  margin: 0 0 15px;
+  padding: 1px 20px;
+  font-style: italic;
+  border-left: 7px solid rgba(102,128,153,0.075);
+}
+
+
+/* Wraps the main content & footer */
+.site-wrapper {
+    position: relative;
+    z-index: 10;
+    min-height: 100%;
+    background: #fff;
+    -webkit-transition: -webkit-transform 0.5s ease;
+            transition: transform 0.5s ease;
+}
+
+/* Header and Navigation */
+
+.main-header  {
+    position: relative;
+    background-color: #ECECEC;
+    border-bottom: 1px solid #E5E5E5;
+    overflow: hidden;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.inner {
+    position: relative;
+    max-width: 890px;
+    margin: 0 auto;
+}
+
+.main-header-content img {
+    float:left;
+}
+
+.main-header-content h1 {
+    padding: 18px 5px 25px 20px;
+    margin:0;
+    color: #406618;
+    float:left;
+}
+
+.main-header-content .divider {
+    float: left;
+    margin: 23px 45px 20px 45px;
+    width: 1px;
+    height: 36px;
+    background-color: #c0c88c;
+}
+
+.main-header-content .slogan {
+    color: #779844;
+    float: left;
+    font-size: 15px;
+    font-weight: normal;
+    padding-top: 28px;
+}
+
+.main-nav {
+    margin-top: 5px;
+    float: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding-left: 17px;
+    margin: 0 5px;
+}
+
+.main-nav ul li {
+    display: inline;
+}
+
+.main-nav ul li a {
+  color: #575757;
+  font-weight: normal;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 3px 36px 3px 0;
+}
+
+/* Pagination */
+
+.extra-pagination {
+  display: none;
+  border-bottom: #EBF2F6 1px solid;
+}
+
+/* Body */
+
+.main-body {
+    margin-top: 25px;
+}
+
+.main-content {
+    float:left;
+    width: 730px;
+}
+
+.main-sidebar {
+    float:left;
+    width: 160px;
+}
+
+.main-sidebar  .icon img {
+    margin: 5px;
+    vertical-align: top;
+}
+
+.main-sidebar .section {
+    background-color: #eeeeee;
+    margin-top: 15px;
+    padding: 6px 7px;
+}
+
+.main-sidebar .section h4 {
+    margin:0;
+}
+
+.main-sidebar .section ul {
+    padding: 0px;
+    margin-top: 15px;
+}
+
+.main-sidebar .section li {
+    list-style: none;
+    margin-bottom: 10px;
+    line-height: 18px;
+}
+
+.main-sidebar .datebox {
+    background-color: #416819;
+    color: #EEE;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 4px;
+}
+
+.main-sidebar .title {
+    font-size: 12px;
+    color: #406618;
+    line-height: 16px !important;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Posts */
+
+.post {
+    padding: 5px 15px 30px 20px;
+    border-left: 5px solid #658f23;
+    margin: 0 0 40px 0;
+
+}
+
+.post h1 {
+    margin: 0;
+}
+
+.post h2 {
+    margin: 0 0 -5px 0;
+}
+
+.post-date {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* Utilies */
+
+.clearfix {
+    clear:both;
+}
+
+/* Code formatting */
+
+pre code {
+    font-family: Consolas;
+    font-size: 11pt;
+    border: none;
+    overflow-x: auto;
+    word-wrap: break-word;
+}
+
+pre {
+    background-color: #F0F0F0 !important;
+    -moz-box-shadow: 0px 2px 7px 0px #CCCCCC;
+    -webkit-box-shadow: 0px 2px 7px 0px #CCCCCC;
+    box-shadow: 0px 2px 7px 0px #CCCCCC;
+    border: none;
+    max-height: 100%;
+    padding: 7px 12px;
+    margin: 10px 0px 10px 0px;
+}
+
+/* Pretty printing styles. Used with prettify.js. */
+
+.str
+{
+    color: #080;
+}
+.kwd
+{
+    color: #00008B;
+}
+.com
+{
+    color: #800;
+}
+.typ
+{
+    color: #2B91AF;
+}
+.lit
+{
+    color: #066;
+}
+.pun
+{
+    color: #000;
+}
+.pln
+{
+    color: #000;
+}
+.tag
+{
+    color: #008;
+}
+.atn
+{
+    color: #606;
+}
+.atv
+{
+    color: #080;
+}
+.dec
+{
+    color: #606;
+}
+
+@media print
+{
+    .str
+    {
+        color: #060;
+    }
+    .kwd
+    {
+        color: #006;
+        font-weight: bold;
+    }
+    .com
+    {
+        color: #600;
+        font-style: italic;
+    }
+    .typ
+    {
+        color: #404;
+        font-weight: bold;
+    }
+    .lit
+    {
+        color: #044;
+    }
+    .pun
+    {
+        color: #440;
+    }
+    .pln
+    {
+        color: #000;
+    }
+    .tag
+    {
+        color: #006;
+        font-weight: bold;
+    }
+    .atn
+    {
+        color: #404;
+    }
+    .atv
+    {
+        color: #060;
+    }
+}

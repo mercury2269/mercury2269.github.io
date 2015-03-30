@@ -1,17 +1,37 @@
-name: Sergey Maskalik's Blog
-url: http://blog.maskalik.com
+#
+# Blog Settings
+#
 author: Sergey Maskalik
+description: In the pursuit of mastery
+url: http://blog.maskalik.com
+title: Sergey Maskalik's blog
+subscribe_rss: http://feeds.feedburner.com/sergeymaskaliksblog
+
+# Github repositories
+github_user: mercury2269
+github_repo_url: https://github.com/mercury2269/mercury2269.github.io/
+
+# Twitter
+twitter_user: mercury2269
+twitter_tweet_button: true
+
+# Disqus Comments
+disqus_short_name: mercury2269
+disqus_show_comment_count: true
+
+# Google Analytics
+google_analytics_tracking_id: UA-27808855-1
+
+#
+# Jekyll Settings
+#
 markdown: redcarpet
-pygments: false
+redcarpet:
+  extensions: ["tables"]
 permalink: pretty
 paginate: 3
-paginate_path: ":num"
-exclude: ['./assets','publish.bat']
-include: ['sitemap.xml']
-encoding: UTF-8
-assets:
-  sources:
-  - assets/js
-  - assets/css
-  js_compressor: uglifier
-  css_compressor: sass
+paginate_path: "page/:num"
+category_dir: categories
+
+gems:
+  - jekyll-sitemap

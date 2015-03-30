@@ -4,95 +4,103 @@
     <title>{{page.title}}</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="language" content="english" />
-    <meta name="author" content="Sergey Maskalik&#39;s blog" />
-    <link href="http://feeds.feedburner.com/sergeymaskaliksblog" type="application/atom+xml" rel="alternate" title="Blog Feed" />
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
-    {% if page.meta-description %}<meta name="description" content="{{page.meta-description}}" />{% endif%}
-    {% if page.meta-keywords %}<meta name="keywords" content="{{page.meta-keywords}}" />{% endif%}
-    {% if page.permalink %}<link rel="canonical" href="{{page.permalink}}" />{% endif %}
-    {% stylesheet theme %}
-    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
-	<script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-27808855-1']);
-        _gaq.push(['_trackPageview']);
+    <meta name="author" content="{{ site.author }}" />
+    <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
 
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
+	{% capture description %}
+		{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}
+	{% endcapture %}
+	<meta name="description" content="{{ description }}">
+	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+	
+	{% capture canonical %}
+		{{ site.url }}
+		{% if site.permalink contains '.html' %}
+			{{ page.url }}
+		{% else %}
+			{{ page.url | remove:'index.html' }}
+		{% endif %}
+		{% endcapture %}
+	<link rel="canonical" href="{{ canonical }}">
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+    <link href="/favicon.ico" rel="shortcut icon">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/base-min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/custom.css" />
+
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css' />
+	{% if site.google_analytics_tracking_id %}
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', '{{ site.google_analytics_tracking_id }}']);
+			_gaq.push(['_trackPageview']);
+
+			(function () {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	{% endif %}
 </head>
-    <body>
-        <div class="wrap">
-            <div class="top">
-                <div class="header">
-                    <div class="container">
-                        <div id="logo">
-                            <a href="/" title="Sergey Maskalik&#39;s blog">
-                                <img alt="Sergey Maskalik" width="83" height="83" title="Sergey Maskalik" src="/assets/images/logo.png" />
-                                <span>Sergey Maskalik&#39;s blog</span>
-                            </a>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="slogan">Sharing wealth one developer at a time!</div>
-                        <!--<div class="search">
-                            @using (Html.BeginForm("Search", "Wiki", FormMethod.Get))
-                            {
-                                <p>
-                                    @Html.TextBox("q", Request.QueryString["q"], new { alt = "Search", @class = "medium" })
-                                    <input type="submit" id="search" class="submit" value="" />
-                                </p>
-                            }
-                        </div>-->
-                    </div>
-                </div>
-                <div class="nav">
-                    <div class="container">
-                        <ul>
-                            <li><a href="/archives/">Archives</a></li>
-                            <li><a href="/tags/">Tags</a></li>
-							<li><a href="/favorites/blog-posts/">Favorites</a></li>
-							<li><a href="/powershell/">PowerShell</a></li>
-							<li><a href="/git/">Git</a></li>
-							<li><a href="/aboutme/">About Me</a></li>
-                        </ul>
-                    </div>
-                </div>
+<body>
+    <div class="site-wrapper">
+        <header class="main-header">
+            <div class="main-header-content inner">
+                <a href="/" title="Sergey Maskalik&#39;s blog">
+                    <img alt="Sergey Maskalik" width="83" height="83" title="Sergey Maskalik" src="/images/logo.png" />
+                    <h1>Sergey Maskalik&#39;s blog</h1>
+
+                </a>
+                <div class="divider"></div>
+                <div class="slogan">{{ site.description }}</div>
             </div>
-            <div class="body">
-                <div class="container">
-                    <div id="divider">
-                        <div class="content">
-                            {{content}}
-                        </div>
-                        <div id="sidebar">
-                            <span class="icon">
-                                <a href="https://twitter.com/#!/mercury2269"><img src="/assets/images/twitter_follow.png" alt="Follow me on twitter" width="152" height="23"/></a>
-                            </span>
-                            <span class="icon">
-                                <a href="http://feeds.feedburner.com/sergeymaskaliksblog"><img src="/assets/images/rssfeed_subscribe.png" alt="Subscribe to rss feed" width="152" height="23"/></a>
-                            </span>
-                            <div class="section">
-                                <h4>RECENT POSTS</h4>
-                                <ul>
-                                    {% for post in site.posts limit: 10 %}
-                                         <li>
-                                            <span class="datebox">{{ post.date | date_to_string }}</span><br />
-                                            <a class="title" href="{{post.url}}">{{ post.title }}</a>
-                                        </li>                                       
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </header>
+		<nav class="main-nav inner">
+			<ul>
+				<li><a href="/archives/">Archives</a></li>
+				<li><a href="/tags/">Tags</a></li>
+				<li><a href="/favorites/blog-posts/">Favorites</a></li>
+				<li><a href="/powershell/">PowerShell</a></li>
+				<li><a href="/git/">Git</a></li>
+				<li><a href="/aboutme/">About Me</a></li>
+			</ul>
+		</nav>
+        <div class="main-body inner">
+            <div class="main-content">
+
+                {{content}}
             </div>
-            <div class="footer">
-				<p>Powered by Jekyll</p>
+            <div class="main-sidebar">
+                <span class="icon">
+                    <a href="https://twitter.com/#!/mercury2269"><img src="/images/twitter_follow.png" alt="Follow me on twitter" width="152" height="23" /></a>
+                </span>
+                <span class="icon">
+                    <a href="{{ site.subscribe_rss }}"><img src="/images/rssfeed_subscribe.png" alt="Subscribe to rss feed" width="152" height="23" /></a>
+                </span>
+                <div class="section">
+                    <h4>RECENT POSTS</h4>
+						<ul>
+							{% for post in site.posts limit: 10 %}
+								 <li>
+									<span class="datebox">{{ post.date | date_to_string }}</span><br />
+									<a class="title" href="{{post.url}}">{{ post.title }}</a>
+								</li>                                       
+							{% endfor %}
+						</ul>
+                </div>
             </div>
         </div>
-		{% javascript site %}
-    </body>
+        <footer class="site-footer inner clearfix">
+            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="poweredby"><p>Powered by Jekyll and Github pages</p>section>
+        </footer>
+    </div>
+
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+    
+</body>
 </html>

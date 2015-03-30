@@ -14,49 +14,51 @@ In one of the applications I'm working on at the moment I wanted to only show Mi
 
 I've opted out to move the initialization logic from Action attribute to the Application_Start() of the Global.asax file. Since that only fires once per application I thought it would be a better place for it. So it looks like this:
 
-    public class MvcApplication : System.Web.HttpApplication
+````csharp
+public class MvcApplication : System.Web.HttpApplication
+{
+    protected void Application_Start()
     {
-        protected void Application_Start()
-        {
-            ...
-           InitMembership();
-        }
-        private void InitMembership()
-        {
-            Database.SetInitializer<UsersContext>(null);
+        ...
+       InitMembership();
+    }
+    private void InitMembership()
+    {
+        Database.SetInitializer<UsersContext>(null);
 
-            try
+        try
+        {
+            using (var context = new UsersContext())
             {
-                using (var context = new UsersContext())
+                if (!context.Database.Exists())
                 {
-                    if (!context.Database.Exists())
-                    {
-                        // Create the SimpleMembership database without Entity Framework migration schema
-                        ((IObjectContextAdapter)context).ObjectContext.CreateDatabase();
-                    }
-                }
-
-                WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
-
-                if (!Roles.RoleExists("Developer"))
-                {
-                    Roles.CreateRole("Developer");
-                }
-                if (!WebSecurity.UserExists("sergey"))
-                {
-                    WebSecurity.CreateUserAndAccount("sergey", "password");
-                }
-                if (!Roles.GetRolesForUser("sergey").Contains("Developer"))
-                {
-                    Roles.AddUserToRole("sergey", "Developer");
+                    // Create the SimpleMembership database without Entity Framework migration schema
+                    ((IObjectContextAdapter)context).ObjectContext.CreateDatabase();
                 }
             }
-            catch (Exception ex)
+
+            WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+
+            if (!Roles.RoleExists("Developer"))
             {
-                throw new InvalidOperationException("The ASP.NET Simple Membership database could not be initialized. For more information, please see http://go.microsoft.com/fwlink/?LinkId=256588", ex);
+                Roles.CreateRole("Developer");
+            }
+            if (!WebSecurity.UserExists("sergey"))
+            {
+                WebSecurity.CreateUserAndAccount("sergey", "password");
+            }
+            if (!Roles.GetRolesForUser("sergey").Contains("Developer"))
+            {
+                Roles.AddUserToRole("sergey", "Developer");
             }
         }
-
+        catch (Exception ex)
+        {
+            throw new InvalidOperationException("The ASP.NET Simple Membership database could not be initialized. For more information, please see http://go.microsoft.com/fwlink/?LinkId=256588", ex);
+        }
+    }
+}
+````
 I left the default database creating with entity framework for now, I will most likely remove it later. The important part is that we create a new role "Developer" and assign it to our default user. Also, we can completely remove InitializeSimpleMembershipAttribute from the solution and remove it from AccountController.
 
 In our MiniProfiler we will check if user has that role and if he or she doesn't we will discard the results.
