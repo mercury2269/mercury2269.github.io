@@ -1,0 +1,11 @@
+{% capture tags %}{{ page.tags }}{{ post.tags}} {% endcapture%}
+
+{% if tags.size > 0 %}
+
+	<span class="tags">
+		<i class="icon-tags"></i>
+	  {% for tag in tags %}
+	    <a class="tag" href="/tags/#{{tag | cgi_encode}}">{{ tag }}</a>
+	  {% endfor %}
+	</span>
+{% endif %}

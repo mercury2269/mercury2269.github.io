@@ -1,0 +1,9 @@
+{% if post.url %}
+  {% assign path = post.path %}
+{% else %}
+  {% assign path = page.path %}
+{% endif %}
+
+<span class="edit">
+	<i class="icon-edit"></i><a href="{{ site.github_repo_url }}edit/gh-pages/{{ path }}">edit</a>
+</span>

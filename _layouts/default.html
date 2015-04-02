@@ -42,6 +42,7 @@
 			})();
 		</script>
 	{% endif %}
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
     <div class="site-wrapper">
@@ -68,15 +69,21 @@
 		</nav>
         <div class="main-body inner">
             <div class="main-content">
-
                 {{content}}
+                <footer class="site-footer inner clearfix">
+		            <section class="copyright">Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }} | Blog content licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a> | Powered by <a href="http://jekyllrb.com/">Jekyll</a> and <a href="https://pages.github.com">Github pages</a></section>
+		        </footer>
             </div>
             <div class="main-sidebar">
                 <span class="icon">
-                    <a href="https://twitter.com/#!/mercury2269"><img src="/images/twitter_follow.png" alt="Follow me on twitter" width="152" height="23" /></a>
+                    <a href="https://twitter.com/#!/mercury2269">
+                    	<i class="icon-twitter"></i>Follow me on Twitter
+                    </a>
                 </span>
                 <span class="icon">
-                    <a href="{{ site.subscribe_rss }}"><img src="/images/rssfeed_subscribe.png" alt="Subscribe to rss feed" width="152" height="23" /></a>
+                    <a href="{{ site.subscribe_rss }}">
+                		<i class="icon-rss"></i>Subscribe to RSS feed
+                    </a>
                 </span>
                 <div class="section">
                     <h4>RECENT POSTS</h4>
@@ -91,10 +98,7 @@
                 </div>
             </div>
         </div>
-        <footer class="site-footer inner clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section class="poweredby"><p>Powered by Jekyll and Github pages</p>section>
-        </footer>
+
     </div>
 
 	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>

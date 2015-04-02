@@ -151,6 +151,24 @@ blockquote {
     width: 160px;
 }
 
+.main-sidebar .icon {
+    background: #648e23;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 2px 5px 2px 8px;
+    display:block;
+    line-height: 18px;
+    margin: 5px;
+}
+
+.icon a {
+    color: white;
+}
+
+.icon i {
+    margin-right:5px;
+}
+
 .main-sidebar  .icon img {
     margin: 5px;
     vertical-align: top;
@@ -214,6 +232,60 @@ blockquote {
 .post-date {
     color: #777;
     font-size: 12px;
+}
+
+.post-meta {
+    margin-top: 50px;
+    padding: 10px 0;
+
+}
+
+.post-meta span {
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+
+.post-meta .tags {
+    float:left;
+}
+
+.post-meta .edit {
+    float:right;
+}
+
+.post-meta .comments {
+    float:right;
+}
+
+.tags .tag {
+  padding: 3px 12px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+a.tag {
+  background: #648e23;
+  color: #FFF;
+  font-size: 1em;
+  padding: 2px 4px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.edit a {
+    margin-left: 5px;
+}
+
+#comments {
+    margin-top:40px;
+}
+/* Footer */
+
+.site-footer {
+    font-size: 11px;
+    text-align: center;
+    padding: 40px 0px;
 }
 
 
