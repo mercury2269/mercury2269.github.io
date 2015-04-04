@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: "Powershell Commands And Notes"
 meta-description: ""
 tags: ["powershell"]

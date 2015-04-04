@@ -35,3 +35,4 @@ category_dir: categories
 
 gems:
   - jekyll-sitemap
+  - jekyll-redirect-from

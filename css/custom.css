@@ -50,6 +50,10 @@ blockquote {
   border-left: 7px solid rgba(102,128,153,0.075);
 }
 
+img { 
+    max-width:100%;
+}
+
 
 /* Wraps the main content & footer */
 .site-wrapper {
@@ -130,9 +134,39 @@ blockquote {
 
 /* Pagination */
 
-.extra-pagination {
-  display: none;
-  border-bottom: #EBF2F6 1px solid;
+.pagination {
+  position: relative;
+  margin: 70px auto 20px;
+  font-size: 1.3rem;
+  color: #648e23;
+  text-align: center;
+}
+
+.pagination a {
+  color: #648e23;
+}
+
+.newer-posts {
+  left: 0;
+}
+
+.older-posts {
+  right: 0;
+}
+
+.older-posts, .newer-posts {
+  position: absolute;
+  display: inline-block;
+  padding: 2px 15px;
+  border: #648e23 1px solid;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: border ease 0.3s;
+}
+
+.page-number {
+  display: inline-block;
+  padding: 5px 0;
 }
 
 /* Body */
@@ -280,6 +314,13 @@ a.tag {
 #comments {
     margin-top:40px;
 }
+
+/* Page */
+.page {
+  padding: 0px 25px 30px 20px;
+  margin: 0 0 40px 0;
+}
+
 /* Footer */
 
 .site-footer {

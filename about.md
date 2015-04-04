@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Sergey Maskalik's Blog - About Me
+layout: page
 meta-description: Sergey Maskalik's Short Bio.
 meta-keywords: .net, c#, asp.net, mvc, developer, programming, blog
 sitemap:

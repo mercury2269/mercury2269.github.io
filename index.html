@@ -29,20 +29,12 @@ sitemap:
 
 
 <!-- Pagination links -->
-<nav class="pagenavi">
+<nav class="pagination">
   {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1%}
-      <a href="/" class="previous">Previous</a>
-    {% else %}
-      <a href="/{{ paginator.previous_page }}" class="previous">Previous</a>
-    {% endif %}
-  {% else %}
-    <span class="previous">Previous</span>
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' }}" class="newer-posts">← Newer Posts</a>
   {% endif %}
-  <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  <span class="page-number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="/{{ paginator.next_page }}" class="next">Next</a>
-  {% else %}
-    <span class="next ">Next</span>
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="older-posts">Older Posts →</a>
   {% endif %}
 </nav>

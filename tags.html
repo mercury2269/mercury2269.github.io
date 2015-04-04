@@ -1,15 +1,10 @@
 ---
-layout: default
-title: Tags
+layout: page
+title: Tagged posts
 sitemap:
   priority: 1
   changefreq: daily
 ---
-<!-- categories -->	
-
-
-
-<h1>Tagged posts:</h1>
 
 {% for tag in site.tags %}
 <div id="{{ tag | first | cgi_escape }}" class="box">
