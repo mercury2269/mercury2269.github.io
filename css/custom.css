@@ -451,3 +451,43 @@ pre {
         color: #060;
     }
 }
+
+/* Responsive stuff */
+
+@media screen and (max-width:950px)
+{
+    .main-sidebar  { display: none;}
+    .main-content { width: 100%; }
+}
+
+@media screen and (max-width:750px)
+{
+    .divider, .slogan { display: none;}
+}
+
+@media screen and (max-width:450px)
+{
+    .main-header-content {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .main-header-content h1 {
+        padding:10px;
+    }
+
+    .main-header-content img {
+        float: none;
+    }
+
+    .main-nav {
+        text-align:center;
+    }
+
+    .main-nav ul li a {
+        padding: 3px 20px 3px 0;
+    }
+    .postList ul {
+        padding: 0px 20px 0px 40px;
+    }
+}

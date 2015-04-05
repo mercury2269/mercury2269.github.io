@@ -7,6 +7,11 @@
     <meta name="author" content="{{ site.author }}" />
     <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
 
+    <!-- http://t.co/dKP3o1e -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	{% capture description %}
 		{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}
 	{% endcapture %}
@@ -20,7 +25,7 @@
 		{% else %}
 			{{ page.url | remove:'index.html' }}
 		{% endif %}
-		{% endcapture %}
+	{% endcapture %}
 	<link rel="canonical" href="{{ canonical }}">
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
