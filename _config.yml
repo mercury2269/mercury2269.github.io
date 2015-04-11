@@ -60,6 +60,11 @@ prose:
           element: "text"
           label: "Title"
           value: ""
+      - name: "meta description"
+        field:
+          element: "textarea"
+          label: "Meta Description"
+          value: ""		  
       - name: "tags"
         field:
           element: "multiselect"
