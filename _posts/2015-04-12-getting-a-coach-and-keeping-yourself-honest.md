@@ -2,8 +2,8 @@
 layout: post
 category: blog
 published: true
-title: ""
-meta description: null
+title: 7 Reasons to Hire a Coach
+meta description: Ideas and reasons why personal coaching can help with personal grown and development.
 tags: 
   - "better-programmer"
 ---
