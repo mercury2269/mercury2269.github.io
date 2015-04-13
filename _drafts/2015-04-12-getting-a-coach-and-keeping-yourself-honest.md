@@ -38,6 +38,6 @@ Just like in sports, a coach will make you do drills that will help you when it'
 Starting from the end result, a coach should be able to help you work out what are the most important thing in your life for you. Are you chasing someone else's dreams, or is this something you trully want for yourself?
 
 ###Enjoy your life now
-Goals are great, but if you are not enjoying what you are doing what is the point of living. I think coach can at times can also remind you to have fun and live in the present if she notices that you are getting burned out.  
+Goals are great, but if you are not enjoying what you are doing, what is the point of living? I think coach can at times can also remind you to have fun and live in the present if she notices that you are getting burned out.  
 
 I'm looking forward to working with a coach and to put myself in a higher gear on the road of greater fulfillment and personal growth. 
