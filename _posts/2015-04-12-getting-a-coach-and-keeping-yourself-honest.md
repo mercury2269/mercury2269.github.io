@@ -10,9 +10,8 @@ tags:
 
 I'm a big believer in continuous improvement and personal growth. But how do you know if you are actually making progress in your life and becoming better? Are you moving towards your goals or are you full or self delusion that keeps you at bay? 
 
-From personal experience, I can tell that we can be dishonest with ourselves. It may seem like you are actually moving forward by reading books, talking to your friends about your goals, making up strange tasks that you need to do before you actually do what you need to do. You might tell yourself, I would be ready only if I knew this and that or had this amazing experience, I would then be able to do it. But there is never going to be a perfect moment, it's always a moving target and I feel like we need to start act and get working on goals. 
-
-Bottom line we need more doing, something that will actually move us towards the goal. 
+From personal experience, I can tell that we can be dishonest with ourselves. It may seem like you are actually moving forward by reading books, talking to your friends about your goals, making up strange tasks that you need to do before you actually do what you need to do. You might tell yourself, I would be ready only if I knew this and that or had this amazing experience, I would then be able to do it. But there is never going to be a perfect moment, it's always a moving target and we just need to start acting and get moving towards our goals.
+ 
 > I hear and I forget. I see and I remember. I do and I understand. - Confucius
 
 We need to make mistakes in order to learn. But we cannot fail by being safe and not putting yourself out there. Hence we grow by doing and learning from being foolish.
