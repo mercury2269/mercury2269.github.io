@@ -1,7 +1,7 @@
 ---
 layout: post
 category: blog
-published: false
+published: true
 title: ""
 meta description: null
 tags: 
@@ -15,7 +15,7 @@ From personal experience, I can tell that we can be dishonest with ourselves. It
 Bottom line we need more doing, something that will actually move us towards the goal. 
 > I hear and I forget. I see and I remember. I do and I understand. - Confucius
 
-We need to make mistakes in order to learn. But we cannot fail by being safe and not putting yourself out there. Hence we grow by doing and learning from being fullish.
+We need to make mistakes in order to learn. But we cannot fail by being safe and not putting yourself out there. Hence we grow by doing and learning from being foolish.
 
 At this moment I feel like I need to make mistakes and learn from it. I want to challenge myself and accomplish my goals. This is why I've decided to try personal coaching. Here are few things that a good coach should be able to help you with. 
 
@@ -32,10 +32,10 @@ Your coach's motivation is to help you succeed with your goals. Her interests ar
 A lot of times the problems that we experience are only in our heads and fear of failure stops us before we can continue to grow. An experienced coach should be very good at helping you to work out those issues.
 
 ###Deliberate practice
-Just like in sports, a coach will make you do drills that will help you when it's show time. In additon, help you with measuring your performance.
+Just like in sports, a coach will make you do drills that will help you when it's show time. In addition, help you with measuring your performance.
 
 ###Getting clear on your goals
-Starting from the end result, a coach should be able to help you work out what are the most important thing in your life for you. Are you chasing someone else's dreams, or is this something you trully want for yourself?
+Starting from the end result, a coach should be able to help you work out what are the most important thing in your life for you. Are you chasing someone else's dreams, or is this something you truly want for yourself?
 
 ###Enjoy your life now
 Goals are great, but if you are not enjoying what you are doing, what is the point of living? I think coach can at times can also remind you to have fun and live in the present if she notices that you are getting burned out.  
