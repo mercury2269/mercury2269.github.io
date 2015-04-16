@@ -48,6 +48,7 @@ blockquote {
   padding: 1px 20px;
   font-style: italic;
   border-left: 7px solid rgba(102,128,153,0.075);
+  word-wrap: break-word;
 }
 
 img { 
