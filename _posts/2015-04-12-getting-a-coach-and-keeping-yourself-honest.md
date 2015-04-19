@@ -27,7 +27,7 @@ It's one thing to make a promise to yourself that you are not going to keep, but
 ###Your best interests
 Your coach's motivation is to help you succeed with your goals. Her interests are aligned with your best interests. She is there to support you and move you along the path to your goals. We all want the best for ourselves, but we are also very easy on ourselves at times, which does not produce results. 
 
-###Work out psychologic issues
+###Work out psychological issues
 A lot of times the problems that we experience are only in our heads, and fear of failure stops us before we can continue to grow. An experienced coach should be very good at helping you to work out those issues.
 
 ###Deliberate practice
