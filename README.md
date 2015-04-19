@@ -1,6 +1,3 @@
-blog
-====
-
 blog.maskalik.com generated with Jekyll and published via Github pages
 
 Blog content licensed under the Creative Commons http://creativecommons.org/licenses/by/2.5/
