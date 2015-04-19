@@ -3,10 +3,6 @@ blog
 
 blog.maskalik.com generated with Jekyll and published via Github pages
 
-
-This is my personal blog generated with Jekyll and published to Amazon S3 and MAXCDN. 
-
-
 Blog content licensed under the Creative Commons http://creativecommons.org/licenses/by/2.5/
 
 
