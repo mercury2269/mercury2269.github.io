@@ -14,6 +14,8 @@ Dan mentions how in this day and age the information and knowledge are accessibl
 
 To make our learning meaninful and not waiste precious time, we need to step back and think what's important for us as developers and how we can maximize our learning effectiveness. Does it really make sense to invest time to learn another new shiny framework, or would learning to understanding patterns and techniques of good programs that will never go obsolete be more meaningful use of our time?
 
+Knowledge and information becomes obsolete with times but the ability to solve problems and fundamentals transcent through time. 
+
 
 
 
