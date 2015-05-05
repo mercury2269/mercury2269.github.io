@@ -11,9 +11,9 @@ JSON.NET is a great library for serializing objects to and from json strings. In
 
 ###Setup
 
-First thing you need to do is to create a custom class the derives from JsonConverter, and override 3 methods. In the CanConvert method we check if the passed in type can be assigned to our target type WierdName.
+First thing you need to do is to create a custom class the derives from JsonConverter, and override 3 methods. In the CanConvert method we check if the passed in type can be assigned to our target type WeirdName.
 
-    public class WierdNameSerializer : JsonConverter
+    public class WeirdNameSerializer : JsonConverter
     {
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
@@ -27,15 +27,15 @@ First thing you need to do is to create a custom class the derives from JsonConv
 
         public override bool CanConvert(Type objectType)
         {
-            return typeof(WierdName).IsAssignableFrom(objectType);
+            return typeof(WeirdName).IsAssignableFrom(objectType);
         }
     }
 
 
 Next is you need to decorate your class which will be serialized with the attribute of a newly created type
 
-    [JsonConverter(typeof(WierdNameSerializer))]
-    public class WierdName
+    [JsonConverter(typeof(WeirdNameSerializer))]
+    public class WeirdName
     {
         public string Name { get; set; }
         public string Value { get; set; }
@@ -47,7 +47,7 @@ Now in your WriteJson method we will cast the value object to your serilized cla
 
     public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
     {
-        var name = value as WierdName;
+        var name = value as WeirdName;
         writer.WriteStartObject();
         writer.WritePropertyName("$" + name.Name);
         serializer.Serialize(writer, name.Value);
@@ -56,7 +56,7 @@ Now in your WriteJson method we will cast the value object to your serilized cla
 
 You can also nest objects within other objects
 
-        var name = value as WierdName;
+        var name = value as WeirdName;
         writer.WriteStartObject();
         writer.WritePropertyName("$" + name.Name);
         writer.WriteStartObject();
@@ -69,7 +69,7 @@ You can also nest objects within other objects
 
 First thing is you need to load the json reader into a JObject. Then you can access fields if you know the key of the property with jsonObject["fieldName"]. If the schema is the same you can use 
 
-    var name = new WierdName(); 
+    var name = new WeirdName(); 
     serializer.Populate(jObject.CreateReader(), name); 
 
 to populate properties automatically. However in our case our property name is not standard so we'll have to manually get it from list of properties. 
@@ -79,7 +79,7 @@ to populate properties automatically. However in our case our property name is n
     {
         JObject jsonObject = JObject.Load(reader);
         var properties = jsonObject.Properties().ToList();    
-        return new WierdName { 
+        return new WeirdName { 
                                Name = properties[0].Name.Replace("$",""), 
                                Value = (string)properties[0].Value 
                              };
@@ -88,16 +88,16 @@ to populate properties automatically. However in our case our property name is n
 ###Testing our custom serializer
 
     // Arrange
-    var wierd = new WierdName {Name = "first", Value = "Sergey"};
+    var weird = new WeirdName {Name = "first", Value = "Sergey"};
 
     // Act
-    // wierd gets serialized into "{\"$first\":\"Sergey\"}"
-    var result = JsonConvert.SerializeObject(wierd); 
+    // weird gets serialized into "{\"$first\":\"Sergey\"}"
+    var result = JsonConvert.SerializeObject(weird); 
 
-    var test = JsonConvert.DeserializeObject<WierdName>(result);
+    var test = JsonConvert.DeserializeObject<WeirdName>(result);
 
     // Assert
-    Assert.AreEqual(wierd.Name,test.Name);
-    Assert.AreEqual(wierd.Value,test.Value);
+    Assert.AreEqual(weird.Name,test.Name);
+    Assert.AreEqual(weird.Value,test.Value);
 
 And that's it, now you should have an idea of how to implement custom json serializers. Please post if you have any questions. 
