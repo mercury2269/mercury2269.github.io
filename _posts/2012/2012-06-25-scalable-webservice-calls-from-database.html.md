@@ -44,8 +44,8 @@ Contract defines how messages are being sent:
 
     CREATE CONTRACT [http://blog.maskalik.com/ImportContract]
     (
-    	[http://www.lampsplus.com/DOMOrderImportRequestMessage] SENT BY INITIATOR,
-    	[http://www.lampsplus.com/DOMOrderImportResponseMessage] SENT BY TARGET
+    	[http://blog.maskalik.com/OrderImportRequestMessage] SENT BY INITIATOR,
+    	[http://blog.maskalik.com/OrderImportResponseMessage] SENT BY TARGET
     )
 
 Now we will need two queues to hold our target messages (messages which will be processed by an activation program) and response messages for initiator which we will get as a response from activation program and processed by initiator).
