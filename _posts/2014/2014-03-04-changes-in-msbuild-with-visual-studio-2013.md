@@ -21,7 +21,7 @@ From the error, I can tell that MSBuild is using the wrong Visual Studio version
 
 I guess something has changed, and indeed, after searching I found that that yes MSBuild [now ships as a part of Visual Stuido][1].
 
-So rather than having MSBuild shipped as a component of a .NET framework, it is now a stand along package that comes with Visual Studio and each version corresponds to the Visual Studio version with it's own toolsets. So the new MSBuild will be under: 
+So rather than having MSBuild shipped as a component of a .NET framework, it is now a stand alone package that comes with Visual Studio and each version corresponds to the Visual Studio version with it's own toolsets. So the new MSBuild will be under: 
 
 > On 32-bit machines they can be found in: C:\Program
 > Files\MSBuild\12.0\bin
@@ -29,8 +29,7 @@ So rather than having MSBuild shipped as a component of a .NET framework, it is 
 > On 64-bit machines the 32-bit tools will be under: C:\Program Files
 > (x86)\MSBuild\12.0\bin
 
-So if you are build you project using C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe
-it will no longer work if you don't have Visual Studio 2012 installed and you need to switch to the version specific msbuild 12.0 in C:\Program Files (x86)\MSBuild\12.0\Bin\MSBuild.exe.
+So if you are building you project using C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe, without Visual Studio 2012 installed, it will no longer work, and you will need to switch to the version specific msbuild 12.0 in C:\Program Files (x86)\MSBuild\12.0\Bin\MSBuild.exe.
 
 That's it, hopefully this post will save someone some time.
 
