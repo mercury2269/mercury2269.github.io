@@ -1,7 +1,8 @@
 ---
 layout: post
 meta description: null
-tags: null
+tags: 
+  - logstash
 published: false
 title: Log4js Http Request Parsing with Logstash
 ---
