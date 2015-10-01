@@ -95,6 +95,8 @@ prose:
               value: "javascript"
             - name: "learning"
               value: "learning"
+            - name: "logstash"
+              value: "logstash"
             - name: "book-recommendations"
               value: "book-recommendations"
             - name: "visual-studio-2013"
