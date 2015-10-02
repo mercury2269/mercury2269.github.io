@@ -4,14 +4,13 @@ meta description: null
 tags: 
   - logstash
 published: false
-title: Log4js Http Request Parsing with Logstash
+title: Expressjs Http Request Parsing with Log4js and Logstash
 ---
 
-Log4js comes with a [connectlogger](https://github.com/nomiddlename/log4js-node/wiki/Connect-Logger) that can capture express/connect http requests and output them to our logs. And to make sense of logs I prefer to use ELK Stack with Logstash parsing the incoming logs, Elastic Search indexing, and Kibana for displaying and making sense of the data.  
 
-In the http request logs I find it useful to include response times, therefore I prefer to customize the default output format of the logs to include this data.  
+I found it straight forward to configure expressjs to send http requests to logs and to setup log parsing. If you use log4js, there is a [connectlogger](https://github.com/nomiddlename/log4js-node/wiki/Connect-Logger) that can capture expressjs/connect http requests. Finally, to make sense of logs I prefer to use ELK Stack with Logstash parsing the incoming logs, Elastic Search indexing, and Kibana for functional dashboards.
 
-Here is the default format with response times appended to the end. 
+I always like to include the response times of http requests. It helps with troubleshooting performance issues down the line. Below is the slightly modified default format with response time appended to the end. 
 
 	var httpLogFormat = ':remote-addr - - [:date] ":method :url ' +
     					'HTTP/:http-version" :status :res[content-length] ' +
@@ -41,8 +40,9 @@ Using [log4js-logstash](https://github.com/gembly/log4js-logstash) appender, I s
 Fields are nice to have if you want to tag your logs with application name or environment, so you can tell where the logs are coming from. 
 
 ###Logstash parsing
-I place patterns into the `/etc/logstash/patterns` folder.  
-Express Pattern
+In order to parse our custom log we need create a logstash pattern, and place it into the `/etc/logstash/patterns` folder.  
+
+Here is the pattern for parsing the log format above
     EXPRESSHTTP %{IP:clientip} - - \[%{DATA:timestamp}\] \"%{WORD:verb} %{URIPATHPARAM:request} HTTP/%{NUMBER:httpversion}\" %{NUMBER:response} (?:%{NUMBER:bytes}|undefined) \"%{URI:referrer}?\" \"%{DATA:agent}\" %{NUMBER:response_time}
 
 ###Logstash input and filter
@@ -78,5 +78,4 @@ Express Pattern
 		}
 	  }
 	}
-In the above config, I perform a number of renames on the nested fields so it can have short and clear names.  And in the final if clause, I checks if the logger_name is marked with "http" and then perform a grok parsing of the logs. It's also good to add received time and then parse the actual log time as in the date pattern. 
-
+In the above config, I perform a number of renames on the nested fields so it can have short and clear names.  And in the final if clause, I checks if the logger_name is marked with "http" and then perform a grok parsing of the logs. It's also good to add received time and then parse the actual log time as in the above date filter.
