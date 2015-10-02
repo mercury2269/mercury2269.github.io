@@ -3,7 +3,7 @@ layout: post
 meta description: null
 tags: 
   - logstash
-published: false
+published: true
 title: Expressjs Http Request Parsing with Log4js and Logstash
 ---
 
