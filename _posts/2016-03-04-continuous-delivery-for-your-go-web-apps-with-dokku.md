@@ -5,7 +5,7 @@ meta description: null
 tags: 
   - "continuous-delivery"
 published: false
-title: Continuous Delivery for Your Go Web Apps with Dokku
+title: Continuous Delivery for Golang Web Apps
 ---
 
 ## Delivering a Minimal Viable Product
@@ -24,5 +24,18 @@ Here are some things that I do not think is necessary and just add extra complex
 - Data replication. I'm not worried too much about loosing test data. I think eventually when I have beta users I will setup some sort of daily backups. 
 - Scalability. I don't need to scale at this moment. Go lang offers great performance and I won't have to worry about hitting the limits for a long time.
 - High availability. Hosting on one node is perfectly fine, if it dies it doesn't cause any production issues because it is a beta product, and the likelyhood is very little of it. 
+
+## Alternatives 
+### Roll your own. 
+Setup a Jenkins box with Docker which will listen to post commit hooks from your source control and then deploy your app.  
+Pros. Most flexible solution.
+Cons. Time to setup and work out all the issues. When I first started, I went with this approach and setup a jenkins image with dokker it took me a good amount of time and not sure if it was time well spent because I wasn't working on the features for my product.
+
+### Heroku
+
+
+
+
+
 
 
