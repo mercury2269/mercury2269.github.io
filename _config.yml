@@ -25,9 +25,6 @@ google_analytics_tracking_id: UA-27808855-1
 #
 # Jekyll Settings
 #
-markdown: redcarpet
-redcarpet:
-  extensions: ["tables"]
 permalink: pretty
 paginate: 3
 paginate_path: "page/:num"
@@ -35,6 +32,7 @@ category_dir: categories
 
 gems:
   - jekyll-sitemap
+  - jekyll-paginate
   - jekyll-redirect-from
 
 prose:
