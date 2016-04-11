@@ -7,7 +7,7 @@ categories: ["sql-server-service-broker"]
 migrated: "true"
 permalink: "/sql-server-service-broker/queue-health-status-dashboard/"
 ---
-###What am I trying to solve.. 
+### What am I trying to solve.. 
 
 *If you are not familiar with Service Broker you can still use this as an example for Knockoutjs and ASP.NET Webmethods.*
 
@@ -85,7 +85,7 @@ And required data function
         }
     };
 
-###Webmethod
+### Webmethod
 Use your favorite data access tool and return an array of data transfer objects
  
 
@@ -95,7 +95,7 @@ Use your favorite data access tool and return an array of data transfer objects
             return MyRepository.GetAllQueueHealthStatus();
         }
 
-###Html 
+### Html 
 Finally we'll add our html markup with knockout bindings
 
     <!-- Errors -->
@@ -121,7 +121,7 @@ Finally we'll add our html markup with knockout bindings
         </tbody>
     </table>
 
-###Color utility functions
+### Color utility functions
 
 To break down formatting: 
 
@@ -205,7 +205,7 @@ Format color functions used in knockoutjs bindings. We use immediate function to
         };
     } ());
 
-###Error handling and loading indicator
+### Error handling and loading indicator
 There is an awesome jquery ajax global event handler that will catch all ajax exceptions, it's especially useful when you have many queries running on the page and you don't want to add error handling logic to each one.
 
     $('body').ajaxError(function (event, request) {

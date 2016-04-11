@@ -15,7 +15,7 @@ Having lack of knowledge and experience in selling, it was very important for me
 
 I've always had this bias about salespeople being sleazy and dishonest, but what Ian found out is that it doesn't have to be that way. He explains that if you focus on FIT (Finding Impact Together) you actually become a problem solver **who works together with the client rather than against him**. You focus on results and impact, and if your service doesn't bring value to the client you walk away. 
 
-###Enter "Same Side Selling"
+### Enter "Same Side Selling"
 
 I was eager to learn more about his approach and I picked up Ian's book right away. Since I never closed a sale before, I found [Same Side Selling book][2] very informative. Further, I learned that rather than explaining all the things that you offer, if you focus on actual problems, your client would not need to translate it into his own language. And if what you are describing is an actual problem that his business is having, he will be much more likely interested in what you have to say. 
 
@@ -27,7 +27,7 @@ This approach of problem solving fits my personality very well, and I will defin
 
 I will have to read this book over again, especially before a meeting with a client, so I can refresh and tune in on the same side selling method. I will let you know how it goes.
 
-###Honest Solution
+### Honest Solution
 
 This book has opened my eyes that selling doesn't have to be adversarial. That figuring out a problem with a client and getting his business should be mutually beneficial. Honest selling helps building reputation and gets repeat business.
 

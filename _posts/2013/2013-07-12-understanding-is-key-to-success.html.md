@@ -8,25 +8,25 @@ permalink: "/tdd/understanding-is-key-to-success/"
 ---
 I've been practicing Test Driven Development (TDD) for a while and recently I learned that my tests were not really helping but actually becoming a huge burden. So for the past couple months I've been on a journey to truly master the TDD and I'm at the point now where I think I have a much better understanding of it. Through my struggles and discoveries with doing TDD comes out this blog post. 
 
-###Why Do We Need TDD
+### Why Do We Need TDD
 
 TDD helps you to design your software components interactively. How does it help you? You write specifications or behaviors of your component and then your write a solution for that behavior and then you refactor to make the code clean. It's extremely valuable in terms of providing safety net so you can have confidence while refactoring, and keep code clean and maintainable while not breaking desired specifications.
 
-###It's Important to Understand What TDD Doesn't Do
+### It's Important to Understand What TDD Doesn't Do
 
 It doesn't help you to find bugs, or regression test the whole system. It also doesn't help you to test interaction between components or if your application is configured properly. There are other means to do that like automated integration tests with projects like Selenium.
 
-###Common Mistakes or When Safety Net Becomes Maintenance Hell
+### Common Mistakes or When Safety Net Becomes Maintenance Hell
 
 I believe almost all developers who start with TDD without guidance of an experienced TDD practitioner are destined to repeat common mistakes and fail. I've done this myself, even though I've read few TDD books and I thought I had it.  Over the last 3 years I've been working on and off on a big and complex calculation functionality piece and used TDD to create a regression safety net. I wrote a huge amount of tests but when the time came to change functionality it didn't go as smooth as planned. Any changes in the systems behavior would break a huge amount of tests and I could see that my tests were making things a lot more difficult instead of helping. So I went on to really understand TDD and truly learn it. I learned that writing a safety net that would actually help is not easy, requires a true understanding of the TDD, use of the design patterns to remove duplicatio,n and keeping unit tests DAMP (Descriptive and Meaninful Phrases). 
 
-###Trully Understanding TDD
+### Trully Understanding TDD
 
 The most important thing: Through each unit test you are specifying one behavior of the component and NOT testing methods of your class. With TDD your unit tests or your specifications become the documentation of how your components are expected to work. BDD tries to address this issue by changing the terminology, so you think in terms of behaviors rather than tests. But to me it's all the same TDD just with different set of mind. When you truly understand TDD you would do BDD naturally. (I'm not an expert, these are just my understanding from what I learned and research)
 
 Your components **must be tested outside-in**. Starting with the public API of your service for example. We'll address some of the setup design patterns to make this possible because you will need to have a descent amount of setup code in order to test the whole component. And since this setup code needs to be in every test and it has to be easy to read and understand. 
 
-###Keys to Success
+### Keys to Success
 
 - Easy to read tests, your tests must be DAMP, they should be easy to read and understand. Extra special care need to be taken when writing test names because you want your test to fail in the future and you want a person who will read your test to understand exactly what happened without looking at internals. BDD addresses it with specifying Given When Then. With frameworks like xUnit I like to follow Subject\_Scenario\_Result in my method names. 
 
@@ -42,11 +42,11 @@ Your components **must be tested outside-in**. Starting with the public API of y
 
 - Don't over-specify your system. Only leave specs that are absolutely necessary in order for your component to work properly. 100% test coverage is meaningless it creates unnecessary work and maintenance burden and it's not pragmatic.
 
-###Design Patterns to Help
+### Design Patterns to Help
 
 Writing tests outside-in will require a lot of setup for each test and we want that setup code to be reused. BDD frameworks address it by reusing scenario sentences. And for TDD we have design patterns that help immensely.
 
-####Builder Pattern
+#### Builder Pattern
  First  pattern is the [Builder Pattern ](http://en.wikipedia.org/wiki/Builder_pattern). When you are creating a scenario for your test, rather then setting up objects manually you should have a class that does that for you. For example you would usually build you objects manually like this:
 
 	var shippingOption = new ShippingOption(); 
@@ -93,7 +93,7 @@ And if you later on add other options like next day air you would simply add ano
 
 It's very simple but powerful, if your ShippingOption object changes your setup code would only change in one place rather than in many unit tests. And it also help with readability I can quickly read that line and see exactly what we have in our setup. 
 
-####Suite Fixture Setup
+#### Suite Fixture Setup
 
 A component might have multiple dependencies and we need a way to abstract the creation of the component so it can be easily changed later without us needing to modify a lot of tests. This is where suite fixture comes in to play.
 

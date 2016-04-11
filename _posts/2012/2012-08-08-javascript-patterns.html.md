@@ -7,7 +7,7 @@ categories: ["guides"]
 migrated: "true"
 permalink: "/guides/javascript-patterns/"
 ---
-###Immediate Function
+### Immediate Function
 
 Execute function as soon as it's defined, variables declared inside have local function scope. Can return values or other functions.
 
@@ -18,7 +18,7 @@ Execute function as soon as it's defined, variables declared inside have local f
         };
     }());
 
-###Privacy, Module Pattern
+### Privacy, Module Pattern
 Private variables can be hidden within the scope of a function, in the case below foo is a private variable.
 
     var foo = (function() {

@@ -9,7 +9,7 @@ permalink: "/asp-net/json-net-implement-custom-serialization/"
 ---
 JSON.NET is a great library for serializing objects to and from json strings. In case you need to have a more control of how your object is being serialized this post covers creation of custom json converter. For instance, I came across a scenario where a json result had to have a property name starting with a $(dollar sign) like "$and" and as you may guess properties in .NET cannot start with a dollar sign. So that's where we would need a custom json converter.
 
-###Setup
+### Setup
 
 First thing you need to do is to create a custom class the derives from JsonConverter, and override 3 methods. In the CanConvert method we check if the passed in type can be assigned to our target type WeirdName.
 
@@ -41,7 +41,7 @@ Next is you need to decorate your class which will be serialized with the attrib
         public string Value { get; set; }
     }
 
-###Custom Writing
+### Custom Writing
 
 Now in your WriteJson method we will cast the value object to your serilized class so we can access properties and do our custom serialization on them.
 
@@ -65,7 +65,7 @@ You can also nest objects within other objects
         writer.WriteEndObject();
         writer.WriteEndObject();
 
-###Custom Reading
+### Custom Reading
 
 First thing is you need to load the json reader into a JObject. Then you can access fields if you know the key of the property with jsonObject["fieldName"]. If the schema is the same you can use 
 
@@ -85,7 +85,7 @@ to populate properties automatically. However in our case our property name is n
                              };
     }
 
-###Testing our custom serializer
+### Testing our custom serializer
 
     // Arrange
     var weird = new WeirdName {Name = "first", Value = "Sergey"};

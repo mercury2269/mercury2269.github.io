@@ -9,7 +9,7 @@ permalink: "/part-of-being-a-good-developer/"
 ---
 Software development has definitely seen an exponential growth in the past decade. And along with that came an immense demand for good developers. With only few industries that are hiring today it's not uncommon to meet with a developer candidate at an interview who has a wonderful resume, but when you ask them to write a simple algorithm or even a nested for loop they really have a hard time. While I believe it's the best job ever, it's not for everyone. With this post I'd like to spell out what it means to be a good developer.
 
-###Good developer
+### Good developer
 But what do I mean by that illusive term "good developer". Aren't all programmers who know how to write code good? Well, absolutely not. I think an average computer science student with a descent understanding of concepts can write code but that does not make him a good developer.
 
 > Any fool can write code that a
@@ -21,11 +21,11 @@ But what do I mean by that illusive term "good developer". Aren't all programmer
 
 There is a lot of meaning in that simple phrase and a lot of learning that is required in order to make code human readable. I think first thing is a real understanding and practice of object oriented principles. I'm not talking about creating instances of the classes or calling methods on object but the object oriented design principles that were introduced to break down the complexity of the  business domain. Concepts like [single responsibly principle][1] , [open/closed principle][2], low [coupling][3] and high cohesion and etc. should be a second nature to a good developer. In addition knowing and practicing concepts like Test Driven Development ([TDD][4]) and Domain Driven Design ([DDD][5]) will help you transition from an average developer into a good developer. Another very important skill every good developer knows is how to take a spaghetti code and make it better, that concept is called [refactoring][6] and a big part of being developer is maintaining existing code which will most likely was written by an average developer. I think learning and becoming good at the concepts above alone would take a significant amount of time probably few years and a lot of reading of fundamental books. That brings us to next topic, continuous learning. 
 
-###Learning
+### Learning
 
 To be a good developer is to love learning. In fact continuous learning is what makes a developer better as time goes on. A lot of average developers don't read books and don't become better at their craft. I think it's like that with many other professions. For example, I'm sure you don't want to go to mediocre dentist because if he messes up it will cause an infection or some other problem down the line, so I'm sure you want to go the good dentist who is a master of his craft. Once a good developer has a grasp of design principles his learning doesn't stop there, there is always going to be new frameworks new technologies other design principles, different programming language and he or she will need to take time to constantly learn them. So if you felt like college was too much learning then this career is not for you because it you will be constantly learning for the rest of your life.
 
-###Passion
+### Passion
 
 Just like with anything else if you love what you do then you will get good at it. If it's just another job then there is no way you are going to go home and read a book on the weekend, write a blog post, experiment with the new and shiny technology or build a project. 
 
@@ -43,7 +43,7 @@ Just like with anything else if you love what you do then you will get good at i
 
 Why waste your time and be mediocre at something when you can live a fulfilling life and be the best you can be.
 
-###Learn from others and pass your knowledge
+### Learn from others and pass your knowledge
 
 I strongly believe that a good developer must have a twitter account, follow other developers and learn what others like you are working on. Once you have something good to share do so. I think building up your circle will get your more exposure and keep you up to the latest and greatest things that are happening. But also don't let twitter destruct you and unfollow those that you think add noise to your stream. You can start by picking developers from my [followers list][7].
 
@@ -59,7 +59,7 @@ Watch videos from conferences sometimes they have gems like a recent talk from [
 
 Start your own project that uses latest exciting technology. As for me, right now I'm working on exciting single page application project that uses knockoutjs and ASP.NET Web API. I'm very excited about working with latest and learning new frameworks.
 
-###Finally
+### Finally
 If you do all of the above while working your regular programming job you will no doubt become a good developer and be on the road to greatness!  And remember it's not the destination it's the journey, and you gotta love the journey that's all it matters :) 
 
 So do you still want to be a developer? Did I miss something, please let me know your thoughts.

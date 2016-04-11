@@ -29,7 +29,7 @@ First, let's dive deeper into the normal software delivery practice of an averag
 > time to do the hard mental work of figuring out whether you can accept
 > new work. Which means more shortcuts, more multitasking. - The Phoenix Project
 
-###How Unicorns Work
+### How Unicorns Work
 
 The main idea behind continuous delivery is to reduce work in progress (WIP) that would allow for quicker feedback of what goes into production. For example, if you work on a 9 month long project it will take you longer than 9 months to see your code in production, and if something has a problem it will be very expensive to go back and change some design decisions. Therefore, there is a good possibility that a fix will just be a hack rather than a proper solution, meaning more technical debt accumulating, more problems later. And not to forget that after 9 months of projects it will take the whole weekend and huge amount of agony to release it. 
 
@@ -56,10 +56,10 @@ Finally, you should be deploying to production with your features turned off tha
 
 And if you think 10 deploys a day is crazy take for example Amazon with a mean time between deployments of 11.6 seconds (insane). And it's not just them, companies like Intuit, Target, Google, Etsy, Flikr, Kansas State University and many others have embraced continuous delivery. 
 
-###It Does Not Have To Be Radical. Small Steps Are Just Fine.
+### It Does Not Have To Be Radical. Small Steps Are Just Fine.
 In a perfect world, a company with problems would stop everything to fix the production line and pay off the technical debt. And some companies like EBay had to do that to escape the vicious cycle. I don't think it has to be so drastic for an average company. I believe if you accept the culture of continuous improvement, and first focus on all the bottlenecks, you can soon get there. For example, you can make small changes that will bring a lot of improvement. For example, if you deployment is a manual process focus on automatically creating packages and create a script that will automatically deploy. If it requires database changes, add scripts to the package and your deployment script will deploy database changes automatically. There is no reason why a DBA has to compile and execute scripts by hand when it can be automated. If your need many QA engineers to regression test the site, why not spend some of their time to write automated tests, I'm sure they would be happier to find new bugs rather then doing senseless testing of the same stuff. 
 
-###Final Thoughts
+### Final Thoughts
 Gene urges us to create a culture of genuine learning and experimentation and that's how best companies get even better. In additional here a great quote if you think it's not relevant to you
 
 > Most of the money spent are on IT Projects these days and even if

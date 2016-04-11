@@ -32,7 +32,7 @@ We don't add any extra code in our controllers since it already checks if model 
 
 And that's it, with minimal modification to our blogging platform we eliminated all those annoying spam bots posting garbage. 
 
-####Update 11-26-12
+#### Update 11-26-12
 Since putting up that spam filter I haven't gotten a single spam comment in last 24 hours. Nice, no more need to administer your comments daily, one less thing to worry about!
 
   [1]: http://funnelweblog.com/

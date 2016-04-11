@@ -7,21 +7,21 @@ categories: ["dom"]
 migrated: "true"
 permalink: "/dom/html5-localstorage-3rd-party-storage-iframe/"
 ---
-###Summary
+### Summary
 
 You have probably seen stackoverflow's 3rd party authentication in action: when you visit one of their sister sites that you have never visited before it automatically knows who you are. That's possible with using 3rd party domain to store global encrypted session information and cross domain communication mechanism. For storage we can use either cookies and html5 localStorage and for communication we will look at using postMessage. 
 
 Without getting into the security aspect of the global authentication, I want to show the cross domain communication mechanism that makes this possible. We will use **unsecure** personalization data, like user's first name for demonstration purposes. 
 
-####Browser support for localStorage
+#### Browser support for localStorage
 ![localStorage browser support][2]
 
 Most modern browsers support localStorage except IE6 and IE7, pretty much exact same storage with postMessage
 
-####Browser support for postMessage:
+#### Browser support for postMessage:
 ![postMessagebrowsersuport][3]
 
-####Browser Usage
+#### Browser Usage
 That brings us to the question, how many users are still using IE6 and IE7 and after we look at the figures decide if we can leave with those numbers or go a painful route. 
 
 As of February 2012 IE6 and IE7 are used by [3.6%][4] of all users, and that number decreasing pretty fast, it dropped 15% from previous months which was at 4.2%.  
@@ -133,7 +133,7 @@ And a code behind that check's if request came from trusted domain
         }
     }
 
-###Reading data from 3rd party domain
+### Reading data from 3rd party domain
 
 To read data from 3rd party we create an iframe similar to the write example.
 

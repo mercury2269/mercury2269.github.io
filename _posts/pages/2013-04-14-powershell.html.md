@@ -7,7 +7,7 @@ categories: []
 migrated: "true"
 permalink: "/powershell/"
 ---
-###Get-Help
+### Get-Help
 
 Powershell has great documentation inside of the shell, including examples. To turn on complete documentation add -full argument.
 
@@ -16,7 +16,7 @@ Powershell has great documentation inside of the shell, including examples. To t
 
 All powershell commands start with a verb and followed by a noun.
 
-###Get-Command
+### Get-Command
 To get a list of commands:
 
 	Get-command
@@ -41,7 +41,7 @@ To stop process and get help on the command, to see examples.
 	get-help stop-process -full	
 
 
-####What if?
+#### What if?
 
 Almost all commands have -WhatIf argument, you can try a command before executing.
 
@@ -55,12 +55,12 @@ To see the list of all available properties from the command
 
 	get-process | get-member
 
-###Get-Member
+### Get-Member
 
 Think of it when you have a question, what do I have, or what does this object have. 
 
 
-####Filtering and blocks
+#### Filtering and blocks
 
 	get-process | where-object { $_.processname -eq 'powershell' }
 
@@ -72,7 +72,7 @@ Outputting to the file
 
 	get process | where-object { $_.CPU -gt 1 } | foreach-object { $_.processname + " is over threashold " } | out-file cpuinfo.txt
 
-###Execution policy 
+### Execution policy 
 
 	Get-ExecutionPolicy
 
@@ -82,12 +82,12 @@ To change execution policy.
 	Set-ExecutionPolicy remotesigned
 
 
-###Scripts
+### Scripts
 
 Once you have your execution policy set to remotesigned you can execute scripts that were created on the local machine. Save scripts with .ps1 extension. And script can be executed by providing a path to the script in the powershell. Like ./somescript.ps1. First dot stands for the current directory.
 
 
-###Great Topics with Get-Help
+### Great Topics with Get-Help
 
     Get-Help About_Execution_Policies
     Get-Help About_Operators
@@ -122,7 +122,7 @@ Push location will save your current location before moving to the new location.
 
 Common use is to control the location inside of the script
 
-###Navigation
+### Navigation
 
 Drive -> Folder -> file
 
@@ -147,12 +147,12 @@ Registry
 
 Push and pop work on custom drives.
 
-####Item commands
+#### Item commands
 This are very useful.
 
 	get-command *item
 
-####Invoke-item
+#### Invoke-item
 
 Equivalent as double click, will open with default registered file.
 Alias
@@ -164,7 +164,7 @@ Will open folder if set to the folder.
 http://bit.ly/psphere to add to the windows explorer open in powershell
 
 	
-###Automating projects
+### Automating projects
 
 	cd ~/documents/project
 	push-location "~/documents/project/test"
@@ -181,7 +181,7 @@ http://bit.ly/psphere to add to the windows explorer open in powershell
     }
 
 
-###Profiles
+### Profiles
 
 Powershell saves scripts into the users profile
 

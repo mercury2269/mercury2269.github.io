@@ -15,7 +15,7 @@ You might be already on top of it and got your application logs written to the f
 
 Many people solved this problem, and there are commercial products that can receive your logs, index and then display them to you. The problem with that is that you are sending your precious data to someone else, and who knows what type of security they have. One of the awesome alternatives, that I found works really well for distributed application, is an open source stack that will aggregate, store, index and have a nice UI for you to graph and slice and dice your data. Elastich Search, Logstash, Kibana or ELK for short is an awesome. I've been using for over a year and makes your life as a developer a whole lot easier and frees up a lot of your time.
 
-##Breaking down the ELK stack
+## Breaking down the ELK stack
 
 Logstash is receiver of your logs, it has many adapters to receive logs from many locations, then you can filter, tag, parse (grok in logstash terms) and the send to a storage mechanism like elastich search. Logstash makes your text data meaningful and queryable. You setup regular epxression patterns for plain text like IIS logs or you can opt in and send your logs as JSON which makes it very flexible to modify log schema. 
 

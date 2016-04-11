@@ -9,7 +9,7 @@ permalink: "/sql-server-service-broker/troubleshooting-external-activation/"
 ---
 Since I've been working with Service Broker I realized how tricky it is to administer and hard to see overall picture. I still come across behaviors I don't understand, and now sure how exactly to reproduce them, they just happen randomly. However I did make a lot of progress on troubleshooting and can get most things back up and running again. 
 
-###Dialogs
+### Dialogs
 
 It's important to know that dialogs are **two way** conversations.  Before you send a message to the target you open a dialog conversation. And it will stay open until your target picks it up, calls end conversation and then your initiator side will end conversation as well. Only after your conversation will be closed. And **closed conversation is a successful conversation**. You have to monitor your conversations to make sure they all get closed properly during development and troubleshooting.
 
@@ -31,7 +31,7 @@ Please note when you remove all conversations it will also disable all EventNoti
 
 If you are building some kinda of a tool that will show the status of your messages you will probably want to save conversation handles and map it to the id of your message that way you can trace back to what's going on with your message.
 
-###Event notifications
+### Event notifications
 Event notifications add extra learning of how notifications work, and know how to fix them. 
 
 First thing you define your event notification
@@ -60,7 +60,7 @@ And there are times when queue can get stuck in NOTIFIED state and you have no m
 
 If the messages were cleared improperly this will fix the queue and set it back to INACTIVE state.
 
-###Event notification troubleshooting
+### Event notification troubleshooting
 
 It's important to understand that every time you create an event notification that creates a queue monitor for your queue, you can view queue monitors:
 

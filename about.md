@@ -10,7 +10,7 @@ permalink: "/aboutme/"
 
 ![Sergey Maskalik](/uploads/2014/DSC07624.jpg)
 
-##About Me
+## About Me
 Hi, I'm Sergey Maskalik, I live in Los Angeles, CA with my lovely wife. I'm a passionate developer, who is always looking for simpler, more maintainable and testable solutions. I LOVE learning and mastering craft of programming. In addition, I'm a big proponent of Test Driven Development, Domain Driven Design, SOLID principles and best practices. I consider myself a full stack developer, I do a lot of backend .NET for my day job and Javascript for fun. I enjoying working with Nodejs and I love the testability story of AngularJs.
 
 I'm always learning and improving. In my spare time, I enjoy reading programming books and blogs. And I hope one day to finally build an my own, amazing product, that will bring a lot of value to the people.

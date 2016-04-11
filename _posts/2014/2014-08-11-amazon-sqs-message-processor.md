@@ -18,7 +18,7 @@ There are mission critical pieces in any business application that might call ex
 
 Therefore, if we want to have a reliable communication with external services we need to implement some kind of a retry mechanism that can redeliver messages and recover from faults.
 
-###Solving Guaranteed Delivery
+### Solving Guaranteed Delivery
 Message Queue is one of the solutions that can address this problem and guarantee delivery. Rather than calling an external API within the application process, like a web request, you place a message into the reliable and durable message queue that guarantees that your message will be delivered to the consumer at least once. Since putting a message on the queue is usually a fast operation, it also speeds up your application performance. Most message queues guarantee delivery by providing some sort of a mechanism of acknowledging if message has been received by the consumer. And if consumer doesn't respond after a period of time the message gets returned into the queue so it can get processed again. This basically guarantees that a message will get delivered or retried for a certain pre-configured number of times. 
 
 There are numerous [alternative][3] Message Queue solutions with each addressing certain problems in it's own way. Since the main specification for calling critical services is guaranteed delivery and we are not building something like a high throughput trading application, the Amazon SQS provides the best alternative to the self-hosted MQs. One of the benefits is that you don't have to administer message queue servers and spend a lot of time figuring out how to setup redundant clusters for reliability and worry about network partitions. Of course you loose on speed of placing a message into the queue. But a 20ms average put call to SQS is also good enough for this problem.
@@ -29,7 +29,7 @@ Putting a message into the queue is [trivial][5] and doesn't need more explanati
 
 I wasn't able to find an open source application that can always listen to the queue and process messages as they come in. So I needed to write my own. A good candidate for this task is a Win32 Service, since it provides a platform for always running service that can also self restart itself on fault and boot up with windows automatically. 
 
-###Creating Message Processor Win32 Service
+### Creating Message Processor Win32 Service
 The windows service must always be running, meaning that each worker will have a main while loop that will continue indefinitely. Also you need to start multiple workers so you have to use some sort of multi threaded solution. 
 My initial version was to new up multiple Threads that invoke an asynchronous method. Like this: 
 
@@ -94,7 +94,7 @@ With windows service when you start a service the main Win32 Service thread give
 
 It uses an AggregateException.Handle method which will throw any unhandled exceptions after it finished running. And since we are only expecting OpearationCanceledException it will just return. 
 
-###Polishing it up
+### Polishing it up
 
 One problem with windows service application is that it's hard debug, you cannot just attach the debugger to the running win32 service. To work around this problem we will use a [topshelf project][8]. Topshelf allows you to run your windows service just like you would run a console application with the ability to debug and step through the code. It also make it easier to configure, install and uninstall the service. 
 
@@ -136,7 +136,7 @@ Here is a quick sample code that will make a message processor console applicati
 
 Once you build an executable, you can run `MessageProcessor.exe install` from command line and the service will get installed, additional -help will show you all the commands that you can do. 
 
-###Summary
+### Summary
 
 Incorporating queues in your application architecture can help with guaranteed delivery of the business critical messages. It can also speed up your application process since it will offload the work to the external process. On the downside, your application becomes dependent on another application running in a separate process and it's more code to maintain and deploy. To ensure you message processor doesn't become a single point of failure, you will also need to have at least 2 nodes running this windows service for redundancy. However, if your business requires guaranteed delivery for the mission critical API calls, the overhead of maintaining message queue solution is worth it's weight. 
 

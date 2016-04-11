@@ -11,7 +11,7 @@ We don't always get to work on the cool stuff like ASP.NET MVC. So for those unf
 
 In ASP.NET, User Controls if designed properly, can play a role of reusable UI components and decrease number of code and markup. It should also make your web project easier to maintain by centralizing code in one location. 
 
-###Parent Page Contract
+### Parent Page Contract
 
 I think the most important and challenging task that developer faces when building a user control is to make it independent from the page. For simple controls that  don't require any input or don't communicate with the page that job is extremely easy. 
 
@@ -99,7 +99,7 @@ Now if another developer slaps your control on the page without implementing an 
 
 This way if user intentionally leaves a 0 for MaximumResults property, User Control will work as intended. 
 
-###Exposing events in your user control. 
+### Exposing events in your user control. 
 
 Let's say your user control is doing account authentication, it's always nice if it provides an event to which a parent page can subscribe and act. For example when user successfully authenticates page would execute a method which will redirect to some other page. That way your User Control stays independent from implementation and does only one thing that it meant to do.
 
@@ -130,25 +130,25 @@ And implementing on page
 
 You can also create a method in the interface similar to the first part with properties. And that's fine if you must force a page to execute some method. If the event is optional then I think eventhandlers are the way to go. 
 
-###Other thoughts:
+### Other thoughts:
 
-####Keep it simple
+#### Keep it simple
 On a general note, it's better to keep user controls simple. If your complexity grows and you get lost in settings that your control requires, it's probably a good time to rethink your design and split some of the code into a page or another user control. 
 
-####Put code behind into separate libraries
+#### Put code behind into separate libraries
 If you are going to be sharing code between projects. It's a good idea to put code behind into a separate code project, that way if any of the logic changes it will impact all projects.
 
-####Create an internal NuGet package
+#### Create an internal NuGet package
 This is definitely a nice way to publish your user control markup and make it updatable with one simple command.
 
 [NuGet Creating Packages][1]
 
-####Embed your javascript as webresource
+#### Embed your javascript as webresource
 If you have a javascript on your user control with some logic, it would not be a bad idea to move that javascript into a code library and make it a webresource. That way javascript code is also centralized and easier to maintain. 
 
 [Walkthrough: Embedding a JavaScript File as a Resource in an Assembly][2]
 
-####Minimize your control's viewstate.
+#### Minimize your control's viewstate.
 There is an awesome article that can help you do that here: 
 
 [TRULY UNDERSTANDING VIEWSTATE][3]
