@@ -21,7 +21,7 @@ Example log output:
 
 	10.201.44.200 - - [Tue, 29 Sep 2015 04:52:53 GMT] "GET / HTTP/1.1" 302 66 "" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36" 2
 
-###Logstash Log4js appender
+### Logstash Log4js appender
 Using [log4js-logstash](https://github.com/gembly/log4js-logstash) appender, I specify the following in the log4js config. 
 
 	{
@@ -41,14 +41,14 @@ Using [log4js-logstash](https://github.com/gembly/log4js-logstash) appender, I s
 
 Fields are nice to have if you want to tag your logs with application name or environment, so you can tell where the logs are coming from. 
 
-###Logstash parsing
+### Logstash parsing
 In order to parse our custom log we need create a logstash pattern, and place it into the `/etc/logstash/patterns` folder.  
 
 Here is the pattern for parsing the log format above
 
 	EXPRESSHTTP %{IP:clientip} - - \[%{DATA:timestamp}\] \"%{WORD:verb} %{URIPATHPARAM:request} HTTP/%{NUMBER:httpversion}\" %{NUMBER:response} (?:%{NUMBER:bytes}|undefined) \"%{URI:referrer}?\" \"%{DATA:agent}\" %{NUMBER:response_time}
 
-###Logstash input and filter
+### Logstash input and filter
 
 	input {
 	  tcp {
