@@ -65,8 +65,7 @@ class PspApiException extends Exception {
 }
 ```
 
-**While exception translation is superior to mindless propagation of exceptions from lower layers, it should not be overused.
-**
+**While exception translation is superior to mindless propagation of exceptions from lower layers, it should not be overused.**
 
 - Use validate params
 - Deal with exceptions on lower level
