@@ -24,7 +24,7 @@ try {
 }
 ```
 
-Better idiom for looping through array for (Mountain m : range) m.climb();
+Better idiom for looping through array is: `for (Mountain m : range) m.climb();`
 
 - Because exceptions are designed for exceptional circumstances, there is little incentive for JVM implementors to make them fast as explicit tests.
 - Placing code inside a try-catch block inhibits certain optimizations that modern JVM implementation might otherwise perform.
@@ -99,8 +99,7 @@ Unchecked exceptions represent programming errors so it is wise to document them
 **If an exception is thrown by many methods in a class for the same reason, it is acceptable to document the exception in the class's documentation comment.**
 
 ## Include failure-capture information in detail messages
-**To capture the failure, the detail message of an exception should contain values of all parameter and fields that "contributed" to the exception.
-**
+**To capture the failure, the detail message of an exception should contain values of all parameter and fields that "contributed" to the exception.**
 ```
 public IndexOutOfBoundsException(int lowerBound, int upperBound, int index) {
   // Generate a detailed message that captures the failure
