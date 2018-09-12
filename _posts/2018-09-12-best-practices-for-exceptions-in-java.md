@@ -1,7 +1,10 @@
 ---
 layout: post
 category: blog
-published: false
+tags: 
+  - java
+  - exceptions
+published: true
 title: Best Practices for Exceptions in Java
 ---
 > When used to best advantage, exceptions can improve a program's readability, reliability, and maintainability. When used improperly, they can have the opposite effect. - Joshua Block
