@@ -25,7 +25,7 @@
 	{% endcapture %}
 	<meta name="description" content="{{ description }}">
 	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
-	
+
 	{% capture canonical %}
 		{{ site.url }}
 		{% if site.permalink contains '.html' %}
@@ -88,7 +88,7 @@
 								 <li>
 									<span class="datebox">{{ post.date | date_to_string }}</span><br />
 									<a class="title" href="{{post.url}}">{{ post.title }}</a>
-								</li>                                       
+								</li>
 							{% endfor %}
 						</ul>
                 </div>
@@ -97,9 +97,24 @@
 
     </div>
 
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="/js/prettify.js"></script>
-    <script type="text/javascript" src="/js/start.js"></script>
+	<script src="/js/prettify.js"></script>
+	<script type="text/javascript">
+		function ready(fn) {
+			if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+				fn();
+			} else {
+				document.addEventListener('DOMContentLoaded', fn);
+			}
+		}
+
+		ready(function() {
+			var preTags = document.getElementsByTagName('pre');
+			for (var i = 0; i < preTags.length; i++)
+			{
+				preTags[i].className = "prettyprint";
+			}
+			PR.prettyPrint();
+		})
+	</script>
 </body>
 </html>
