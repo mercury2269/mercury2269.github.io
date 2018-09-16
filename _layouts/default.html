@@ -26,15 +26,7 @@
 	<meta name="description" content="{{ description }}">
 	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
-	{% capture canonical %}
-		{{ site.url }}
-		{% if site.permalink contains '.html' %}
-			{{ page.url }}
-		{% else %}
-			{{ page.url | remove:'index.html' }}
-		{% endif %}
-	{% endcapture %}
-	<link rel="canonical" href="{{ canonical }}">
+	<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
     <link href="/favicon.ico" rel="shortcut icon">
