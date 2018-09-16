@@ -30,7 +30,7 @@ paginate: 3
 paginate_path: "page/:num"
 category_dir: categories
 
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-redirect-from
@@ -62,7 +62,7 @@ prose:
         field:
           element: "textarea"
           label: "Meta Description"
-          value: ""		  
+          value: ""
       - name: "tags"
         field:
           element: "multiselect"
@@ -218,7 +218,7 @@ prose:
             - name: "favorites"
               value: "favorites"
             - name: "startup-weekend"
-              value: "startup-weekend"  
+              value: "startup-weekend"
     _posts/pages:
       - name: "layout"
         field:
@@ -234,4 +234,4 @@ prose:
           element: "text"
           label: "Permalink"
           value: ""
-  
+
