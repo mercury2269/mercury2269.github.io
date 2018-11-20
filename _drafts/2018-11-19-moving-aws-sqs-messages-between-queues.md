@@ -2,9 +2,9 @@
 layout: post
 category: blog
 published: false
-title: Moving AWS SQS messages between queues
+title: Best way to move AWS SQS messages between queues
 ---
-I've recently updated a tiny utility script ([sqsmover](https://github.com/mercury2269/sqsmover)) that I wrote when I was learning Go Lang that moves SQS messages between queues. After three years, it is still a userful tool when I need to move messages between queues. I feel like it could be useful to others who use SQS and deadletter queues because at one point something is going to fail and your messages will end up in the deadletter. 
+I've recently updated a tiny utility script ([sqsmover](https://github.com/mercury2269/sqsmover)) that I wrote when I was learning Go Lang that moves AWS SQS messages between queues. After three years, it is still a userful tool when I need to move messages between queues. I feel like it could be useful to others who use SQS and deadletter queues because at one point something is going to fail and your messages will end up in the deadletter. 
 
 In order to polish it, I've included the following features:
 
