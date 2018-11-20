@@ -34,7 +34,7 @@ It sucked when your script fails and you don't know what went wrong, so I've inc
 ### Progress indicator
 For the first version app I used to just output every message moved to the screen. This is not very useful if you have thousands of messages. A better user experience is to include a progress indicator. 
 
-![progress indicator](https://github.com/mercury2269/mercury2269.github.io/raw/master/uploads/2018/sqsmover_progress.png "SQS Mover progress indicator")
+![progress indicator](https://github.com/mercury2269/mercury2269.github.io/raw/master/uploads/2018/sqsmover_progress.gif "SQS Mover progress indicator")
 
 ## Future work
 At the moment the utility is using a batch download and upload which moves about 10 messages at a time. It's pretty fast if you need to move few thousand of messages but if you have a million stuck in the deadletter queue I could imagine it could take a while. To speed up, I'm thinking to introduce multiple receiver and consumer threads and allow users to specify how many threads to use.
