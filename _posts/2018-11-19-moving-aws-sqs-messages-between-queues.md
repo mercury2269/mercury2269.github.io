@@ -24,12 +24,8 @@ Updated installation instruction with one line shell script install for macOS, L
 
 ### Intuitive error messaging
 It sucked when your script fails and you don't know what went wrong, so I've included a lot more user friendly error messages that should help users with figuring out what needs to be done. 
-```
-➜  sqsmover git:(master) sqsmover -s test2 -d test -r us-west-2
 
-   ⨯ Unable to locate the source queue with name: test2, check region and name. error=InvalidClientTokenId: The security token included in the request is invalid.
-	status code: 403, request id: 6dbf73d2-4f1a-5aee-b2dd-27bfe64d0aae
-```
+![error](https://github.com/mercury2269/mercury2269.github.io/raw/master/uploads/2018/sqsmover_error.png "SQS Mover errors")
 
 ### Progress indicator
 For the first version app I used to just output every message moved to the screen. This is not very useful if you have thousands of messages. A better user experience is to include a progress indicator. 
