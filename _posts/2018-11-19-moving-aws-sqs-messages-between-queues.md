@@ -14,18 +14,7 @@ I've recently updated a tiny utility script ([sqsmover](https://github.com/mercu
 In order to polish it, I've included the following features:
 
 ### Help menu 
-```
-➜  sqsmover git:(master) sqsmover --help
-
-usage: sqsmover --source=SOURCE --destination=DESTINATION [<flags>]
-
-Flags:
-      --help                     Show context-sensitive help (also try --help-long and
-                                 --help-man).
-  -s, --source=SOURCE            Source queue name to move messages from
-  -d, --destination=DESTINATION  Destination queue name to move messages to
-  -r, --region="us-west-2"       AWS Region for source and destination queues
-```
+![sqs mover help menu](https://github.com/mercury2269/mercury2269.github.io/raw/master/uploads/2018/sqsmover_help.png "SQS Mover help menu")
 
 ### Region flag
 Original version had region hardcoded in the code and needed a code change if you used a different region, oops. I've modified to allow region to be overwritten as a command line flag and default to `us-west-2`.
@@ -45,7 +34,7 @@ It sucked when your script fails and you don't know what went wrong, so I've inc
 ### Progress indicator
 For the first version app I used to just output every message moved to the screen. This is not very useful if you have thousands of messages. A better user experience is to include a progress indicator. 
 
-![progress indicator](http://g.recordit.co/PDv1Snuutf.gif)
+![progress indicator](https://github.com/mercury2269/mercury2269.github.io/raw/master/uploads/2018/sqsmover_progress.png "SQS Mover progress indicator")
 
 ## Future work
 At the moment the utility is using a batch download and upload which moves about 10 messages at a time. It's pretty fast if you need to move few thousand of messages but if you have a million stuck in the deadletter queue I could imagine it could take a while. To speed up, I'm thinking to introduce multiple receiver and consumer threads and allow users to specify how many threads to use.
