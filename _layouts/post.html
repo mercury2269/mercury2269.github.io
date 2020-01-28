@@ -4,14 +4,10 @@ comments: true
 ---
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="title" itemprop="name">{{ page.title }}</h1>
-    <span class="post-date">{% include post/date.html %}{{ time }}</span>
-    <div class="entry-content" itemprop="articleBody">{{ content }}</div>
-    <div class="post-meta">
-      {% include post/tags.html %}
-      {% include post/edit.html %}
-    </div>  
-    {% include post/disqus_comments.html %}
-    
-
+  <h1 class="title" itemprop="name">{{ page.title }}</h1>
+  <span class="post-date">{% include post/date.html %}{{ time }}</span>
+  <div class="entry-content" itemprop="articleBody">{{ content }}</div>
+  <div class="post-meta">
+    {% include post/tags.html %} {% include post/edit.html %}
+  </div>
 </article>

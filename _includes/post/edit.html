@@ -1,9 +1,7 @@
-{% if post.url %}
-  {% assign path = post.path %}
-{% else %}
-  {% assign path = page.path %}
-{% endif %}
+{% if post.url %} {% assign path = post.path %} {% else %} {% assign path =
+page.path %} {% endif %}
 
 <span class="edit">
-	<i class="icon-edit"></i><a href="{{ site.github_repo_url }}edit/master/{{ path }}">edit</a>
+  <i class="icon-edit"></i
+  ><a href="{{ site.github_repo_url }}edit/master/{{ path }}">edit</a>
 </span>
