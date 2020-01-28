@@ -11,30 +11,39 @@ sitemap:
 {% for post in paginator.posts %}
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <header class="post-header">
-        <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title}}</a></h2>
-        <span class="post-date">{% include post/date.html %}{{ time }}</span>
-    </header>
-    <section class="post-content">
-        {{ post.content }}
-    </section>
-    <div class="post-meta">
-      {% include post/tags.html %}
-      {% include post/comments_link.html %}
-      {% include post/edit.html %}
-    </div>
+  <header class="post-header">
+    <h2 class="post-title" itemprop="name">
+      <a href="{{ post.url }}" itemprop="url">{{ post.title}}</a>
+    </h2>
+    <span class="post-date">{% include post/date.html %}{{ time }}</span>
+  </header>
+  <section class="post-content">
+    {{ post.content }}
+  </section>
+  <div class="post-meta">
+    {% include post/tags.html %} {% include post/edit.html %}
+  </div>
 </article>
 
 {% endfor %}
 
-
 <!-- Pagination links -->
 <nav class="pagination">
   {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' }}" class="newer-posts">← Newer Posts</a>
+  <a
+    href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' }}"
+    class="newer-posts"
+    >← Newer Posts</a
+  >
   {% endif %}
-  <span class="page-number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  <span class="page-number"
+    >Page: {{ paginator.page }} of {{ paginator.total_pages }}</span
+  >
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="older-posts">Older Posts →</a>
+  <a
+    href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+    class="older-posts"
+    >Older Posts →</a
+  >
   {% endif %}
 </nav>
