@@ -19,8 +19,11 @@ In order to polish it, I've included the following features:
 ### Region flag
 Original version had region hardcoded in the code and needed a code change if you used a different region, oops. I've modified to allow region to be overwritten as a command line flag and default to `us-west-2`.
 
+### FIFO queues support
+When sending messages to FIFO queues MessageGroupId is a required field, and because it is not part of the message you have to explicitly copy it from the original message to the destination. Finally every message in the FIFO queue has a deduplication id. It's either explicitly set by the caller or automatically hashed based on the message content. Because I want to support all FIFO queues, deduplication id is also copied when moving messages.
+
 ###  Installation
-Updated installation instruction with one line shell script install for macOS, Linux, or OpenBSD! And compiled binary for Windows. No longer in order to install the app you have to have Go Lang installed locally and issue a `go get ...` command. This was pretty easy to do with awesome [goreleaser](https://github.com/goreleaser/goreleaser) project and companion [godownloader](https://github.com/goreleaser/godownloader). GoReleaser automatically creates binary releases and publishes it to github while GoDownloader will create a bash script for one line installation. 
+Updated installation options with homebrew tap install `brew install mercury2269/homebrew-tap/sqsmover` for macOS, shell script for macOS, Linux, or OpenBSD. And compiled binary for Windows. No longer in order to install the app you have to have Go Lang installed locally and issue a `go get ...` command. This was pretty easy to do with awesome [goreleaser](https://github.com/goreleaser/goreleaser) project and companion [godownloader](https://github.com/goreleaser/godownloader). GoReleaser automatically creates binary releases and publishes it to github while GoDownloader will create a bash script for one line installation. 
 
 ### Intuitive error messaging
 It sucked when your script fails and you don't know what went wrong, so I've included a lot more user friendly error messages that should help users with figuring out what needs to be done. 
