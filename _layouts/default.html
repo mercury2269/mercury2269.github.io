@@ -1,112 +1,156 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-27808855-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-27808855-1"
+    ></script>
     <script>
-    	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'UA-27808855-1');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-27808855-1");
     </script>
     <title>{{page.title}}</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="language" content="english" />
     <meta name="author" content="{{ site.author }}" />
-    <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+    <link
+      href="{{ site.subscribe_rss }}"
+      rel="alternate"
+      title="{{site.title}}"
+      type="application/atom+xml"
+    />
 
     <!-- http://t.co/dKP3o1e -->
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	{% capture description %}
-		{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}
-	{% endcapture %}
-	<meta name="description" content="{{ description }}">
-	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+    {% capture description %} {% if page.description %}{{ page.description }}{%
+    else %}{{ site.description }}{% endif %} {% endcapture %}
+    <meta name="description" content="{{ description }}" />
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}" />
+    {% endif %}
 
-	<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-    <link href="/favicon.ico" rel="shortcut icon">
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="/css/custom.css" />
+    <link
+      rel="canonical"
+      href="{{ site.url }}{{ page.url | replace:'index.html',''}}"
+    />
+    <!--[if lt IE 9
+      ]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script
+    ><![endif]-->
+    <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+      integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/custom.css" />
 
-	<link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css' />
+    <link
+      href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="site-wrapper">
-        <header class="main-header">
-            <div class="main-header-content inner">
-                <a href="/" title="Sergey Maskalik&#39;s blog">
-                    <img alt="Sergey Maskalik" width="83" height="83" title="Sergey Maskalik" src="/images/logo.png" />
-                    <h1>Sergey Maskalik&#39;s blog</h1>
-
-                </a>
-                <div class="divider"></div>
-                <div class="slogan">{{ site.description }}</div>
-            </div>
-        </header>
-		<nav class="main-nav inner">
-			<ul>
-				<li><a href="/archives/">Archives</a></li>
-				<li><a href="/tags/">Tags</a></li>
-				<li><a href="/favorites/blog-posts/">Favorites</a></li>
-				<li><a href="/powershell/">PowerShell</a></li>
-				<li><a href="/git/">Git</a></li>
-				<li><a href="/aboutme/">About Me</a></li>
-			</ul>
-		</nav>
-        <div class="main-body inner">
-            <div class="main-content">
-                {{content}}
-                <footer class="site-footer inner clearfix">
-		            <section class="copyright">Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }} | Blog content licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a> | Powered by <a href="http://jekyllrb.com/">Jekyll</a> and <a href="https://pages.github.com">Github pages</a></section>
-		        </footer>
-            </div>
-            <div class="main-sidebar">
-                <span class="icon">
-                    <a href="{{ site.subscribe_rss }}">
-                		<i class="icon-rss"></i>Subscribe to RSS feed
-                    </a>
-                </span>
-                <div class="section">
-                    <h4>RECENT POSTS</h4>
-						<ul>
-							{% for post in site.posts limit: 10 %}
-								 <li>
-									<span class="datebox">{{ post.date | date_to_string }}</span><br />
-									<a class="title" href="{{post.url}}">{{ post.title }}</a>
-								</li>
-							{% endfor %}
-						</ul>
-                </div>
-            </div>
+      <header class="main-header">
+        <div class="main-header-content inner">
+          <a href="/" title="Sergey Maskalik&#39;s blog">
+            <img
+              alt="Sergey Maskalik"
+              width="83"
+              height="83"
+              title="Sergey Maskalik"
+              src="/images/logo.png"
+            />
+            <h1>Sergey Maskalik&#39;s blog</h1>
+          </a>
+          <div class="divider"></div>
+          <div class="slogan">{{ site.description }}</div>
         </div>
-
+      </header>
+      <nav class="main-nav inner">
+        <ul>
+          <li><a href="/archives/">Archives</a></li>
+          <li><a href="/tags/">Tags</a></li>
+          <li><a href="/favorites/blog-posts/">Favorites</a></li>
+          <li><a href="/powershell/">PowerShell</a></li>
+          <li><a href="/git/">Git</a></li>
+          <li><a href="/aboutme/">About Me</a></li>
+        </ul>
+      </nav>
+      <div class="main-body inner">
+        <div class="main-content">
+          {{content}}
+          <footer class="site-footer inner clearfix">
+            <section class="copyright">
+              Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }}
+              | Blog content licensed under the Creative Commons
+              <a href="http://creativecommons.org/licenses/by/2.5/"
+                >CC BY 2.5</a
+              >
+              | Powered by <a href="http://jekyllrb.com/">Jekyll</a> and
+              <a href="https://pages.github.com">Github pages</a>
+            </section>
+          </footer>
+        </div>
+        <div class="main-sidebar">
+          <span class="icon">
+            <a href="{{ site.subscribe_rss }}">
+              <i class="icon-rss"></i>Subscribe to RSS feed
+            </a>
+          </span>
+          <div class="section">
+            <h4>RECENT POSTS</h4>
+            <ul>
+              {% for post in site.posts limit: 10 %}
+              <li>
+                <span class="datebox">{{ post.date | date_to_string }}</span
+                ><br />
+                <a class="title" href="{{post.url}}">{{ post.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
-	<script src="/js/prettify.js"></script>
-	<script type="text/javascript">
-		function ready(fn) {
-			if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-				fn();
-			} else {
-				document.addEventListener('DOMContentLoaded', fn);
-			}
-		}
+    <script src="/js/prettify.js"></script>
+    <script type="text/javascript">
+      function ready(fn) {
+        if (
+          document.attachEvent
+            ? document.readyState === "complete"
+            : document.readyState !== "loading"
+        ) {
+          fn();
+        } else {
+          document.addEventListener("DOMContentLoaded", fn);
+        }
+      }
 
-		ready(function() {
-			var preTags = document.getElementsByTagName('pre');
-			for (var i = 0; i < preTags.length; i++)
-			{
-				preTags[i].className = "prettyprint";
-			}
-			PR.prettyPrint();
-		})
-	</script>
-</body>
+      ready(function() {
+        var preTags = document.getElementsByTagName("pre");
+        for (var i = 0; i < preTags.length; i++) {
+          preTags[i].className = "prettyprint";
+        }
+        PR.prettyPrint();
+      });
+    </script>
+  </body>
 </html>
