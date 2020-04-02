@@ -61,7 +61,77 @@ dependencies {
 ```
 ## Example Script
 
-{% gist ecc31a7d8a479f0c5c82d5a4a917006d %}
+```
+import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
+import com.google.api.client.http.HttpTransport;
+import com.google.api.client.http.javanet.NetHttpTransport;
+import com.google.api.client.json.jackson2.JacksonFactory;
+import com.google.api.services.androidpublisher.AndroidPublisher;
+import com.google.api.services.androidpublisher.AndroidPublisherScopes;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.util.Collections;
+import java.util.Set;
+import java.util.logging.Handler;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
+import java.util.logging.Logger;
+
+class Scratch {
+    public static void main(String[] args) {
+        enableLogging();
+        
+        Set<String> SCOPES = Collections.singleton(AndroidPublisherScopes.ANDROIDPUBLISHER);
+        JacksonFactory jsonFactory = JacksonFactory.getDefaultInstance();
+        NetHttpTransport httpTransport = new NetHttpTransport();
+        GoogleCredential credential = getGoogleCredentials("your private service key goes here").createScoped(SCOPES);
+
+        AndroidPublisher androidPublisher = new AndroidPublisher.Builder(httpTransport, jsonFactory, credential)
+                .setApplicationName("com.yourname.app")
+                .build();
+
+        try {
+            androidPublisher.orders().refund("com.yourname.app","GPA.3333-7777-6666-44444").execute();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+
+    }
+
+    private static GoogleCredential getGoogleCredentials(String privateKey) {
+        try {
+            return GoogleCredential.fromStream(new ByteArrayInputStream(privateKey.getBytes()));
+
+        } catch (IOException e) {
+            throw new IllegalArgumentException("Private key for Google Pay is invalid", e);
+        }
+    }
+
+    public static void enableLogging() {
+        Logger logger = Logger.getLogger(HttpTransport.class.getName());
+        logger.setLevel(Level.CONFIG);
+        logger.addHandler(new Handler() {
+
+            @Override
+            public void close() throws SecurityException {
+            }
+
+            @Override
+            public void flush() {
+            }
+
+            @Override
+            public void publish(LogRecord record) {
+                // Default ConsoleHandler will print >= INFO to System.err.
+                if (record.getLevel().intValue() < Level.INFO.intValue()) {
+                    System.out.println(record.getMessage());
+                }
+            }
+        });
+    }
+}
+```
 
 In the above script
 
