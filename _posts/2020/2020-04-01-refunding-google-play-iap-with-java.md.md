@@ -90,19 +90,16 @@ class Scratch {
         AndroidPublisher androidPublisher = new AndroidPublisher.Builder(httpTransport, jsonFactory, credential)
                 .setApplicationName("com.yourname.app")
                 .build();
-
         try {
             androidPublisher.orders().refund("com.yourname.app","GPA.3333-7777-6666-44444").execute();
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     private static GoogleCredential getGoogleCredentials(String privateKey) {
         try {
             return GoogleCredential.fromStream(new ByteArrayInputStream(privateKey.getBytes()));
-
         } catch (IOException e) {
             throw new IllegalArgumentException("Private key for Google Pay is invalid", e);
         }
@@ -112,15 +109,12 @@ class Scratch {
         Logger logger = Logger.getLogger(HttpTransport.class.getName());
         logger.setLevel(Level.CONFIG);
         logger.addHandler(new Handler() {
-
             @Override
             public void close() throws SecurityException {
             }
-
             @Override
             public void flush() {
             }
-
             @Override
             public void publish(LogRecord record) {
                 // Default ConsoleHandler will print >= INFO to System.err.
