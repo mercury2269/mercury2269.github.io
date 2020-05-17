@@ -14,7 +14,7 @@ One of the challenges for large multi-tenant systems that rely on many external 
 
 Even with the best intentions, humans who have to configure and maintain these types of complex systems are known to be unreliable.
 
-... [one study](http://roc.cs.berkeley.edu/papers/usits03.pdf) of large internet services found that configuration errors by operators were the leading cause of outages, where hardware faults (servers or network) play a role in only 10-25% of outages. Designing Data-Intensive Applications, Martin Kleppmann
+> ... [one study](http://roc.cs.berkeley.edu/papers/usits03.pdf) of large internet services found that configuration errors by operators were the leading cause of outages, where hardware faults (servers or network) play a role in only 10-25% of outages. Designing Data-Intensive Applications, Martin Kleppmann
 
 Due to many possible test scenarios, manual regression testing after each release is not practical, especially if your team is following a [continuous delivery](https://en.wikipedia.org/wiki/Continuous_delivery) approach.
 
