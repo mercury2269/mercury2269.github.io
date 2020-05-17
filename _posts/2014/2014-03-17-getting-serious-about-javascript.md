@@ -45,7 +45,7 @@ What others JavaScript libraries or books did you enjoy? Send me a line [@mercur
 
 
   [1]: http://modulecounts.com/
-  [2]: https://www.paypal-engineering.com/2013/11/22/node-js-at-paypal/
+  [2]: https://medium.com/paypal-engineering/node-js-at-paypal-4e2d1d08ce4f
   [3]: http://paulgraham.com/avg.html
   [4]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/EventLoop
   [5]: https://github.com/tryghost/Ghost
