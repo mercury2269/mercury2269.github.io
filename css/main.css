@@ -380,7 +380,8 @@ pre[class*="language-"] {
   border-radius: 4px;
 }
 
-p code {
+p code,
+:not(pre) > code[class*="language-"] {
   border: 1px solid #e3edf3;
   background-color: #f7fafb;
   padding: 2px 4px;
