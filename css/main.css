@@ -383,7 +383,7 @@ pre[class*="language-"] {
 p code {
   border: 1px solid #e3edf3;
   background: #f7fafb !important;
-  padding: 2px 4px;
+  padding: 2px 4px !important;
   font-size: 90%;
   border-radius: 4px;
   -webkit-font-smoothing: antialiased;
