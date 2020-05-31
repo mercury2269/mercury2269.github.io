@@ -387,7 +387,7 @@ p code {
   font-size: 90%;
   border-radius: 4px;
   -webkit-font-smoothing: antialiased;
-  color: #383838;
+  color: #383838 !important;
 }
 
 ol.linenums {
