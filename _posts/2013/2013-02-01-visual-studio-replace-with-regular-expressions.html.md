@@ -7,19 +7,23 @@ categories: ["asp.net"]
 migrated: "true"
 permalink: "/asp-net/visual-studio-replace-with-regular-expressions/"
 ---
-Regular expressions are very handy especially when you are refactoring and there is a lot of manual changes. Visual Studio Replace with regex came in really handy when porting our code base at work to use [MiniProfiler][1]. Since MiniProfiler returns a DbConnection rather than SqlConnection, there are few small shorthands that no longer worked with DbConnection. 
+
+Regular expressions are very handy especially when you are refactoring and there is a lot of manual changes. Visual Studio Replace with regex came in really handy when porting our code base at work to use [MiniProfiler][1]. Since MiniProfiler returns a DbConnection rather than SqlConnection, there are few small shorthands that no longer worked with DbConnection.
 
 The following example will work with SqlCommand but would not work with the DbCommand because DbCommand.Parameters doesn't expose a Value property which is a short hand notation that returns the last SqlParameter Value.
 
+```csharp
     using(var cn = SqlTools.GetSqlConnection("Default"))
     {
         var cmd = cn.CreateCommand();
         cmd.Parameters.Add(new SqlParameter("@Password", SqlDbType.NVarChar, 128)).Value = password;
+```
 
+So I needed to modify this code in about 650 places to use object initializer like this:
 
-So I needed to modify this code in about 650 places to use object initializer like this: 
-
+```csharp
     cmd.Parameters.Add(new SqlParameter("@UserName", SqlDbType.NVarChar, 256) { Value = username });
+```
 
 With a little bit of research I wrote a regular expression for Visial Studio Replace to fix this issue. Which looks like this:
 
@@ -29,7 +33,7 @@ Repleace with what: `new SqlParameter(\1) { \2 = \3 });`
 
 And vua-lah!, it is all fixed.
 
-One important feature to notice is that you use curly braces to mark the values that you are extracting from the string, this is different from other flavors where you use parenthesis. 
+One important feature to notice is that you use curly braces to mark the values that you are extracting from the string, this is different from other flavors where you use parenthesis.
 
 **Update 04-23-2013**
 
@@ -39,4 +43,4 @@ Find what: `new SqlParameter\(([^)]*)\)\)\.([A-Za-z]+) = ([^\}]+);`
 
 Repleace with what: `new SqlParameter($1) { $2 = $3 });`
 
-  [1]: http://miniprofiler.com/
+[1]: http://miniprofiler.com/

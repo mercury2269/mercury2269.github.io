@@ -1,19 +1,20 @@
 ---
 layout: post
 category: blog
-tags: 
+tags:
   - java
   - exceptions
 published: true
 title: Best Practices for Exceptions in Java
 ---
+
 > When used to best advantage, exceptions can improve a program's readability, reliability, and maintainability. When used improperly, they can have the opposite effect. - Joshua Block
 
-Most of this wisdom comes from Joshua Bloch's [Effective Java](https://amzn.to/2xamghn) book, see the book for the complete discussion on the exceptions. 
+Most of this wisdom comes from Joshua Bloch's [Effective Java](https://amzn.to/2xamghn) book, see the book for the complete discussion on the exceptions.
 
 ## Use exceptions only for exceptions conditions
 
-```
+```java
 // Horrible abuse of exceptions. Don't ever do this!
 try {
   int i = 0;
@@ -41,7 +42,7 @@ Problems when a method throwing an exception that has not apparent connection to
 
 Higher layers should catch lower-level exceptions and, in their place, throw exceptions that can be explained in terms of the higher-level abstraction. This idiom is know as exception translation.
 
-```
+```java
 // Exception translation
 try {
    httpClient.execute(...)
@@ -50,7 +51,7 @@ try {
 }
 ```
 
-```
+```java
 // Exception chaining (special form of translation)
 try {
    httpClient.execute(...)
@@ -81,11 +82,13 @@ Because checked exceptions generally indicate recoverable conditions, it's espec
 [More on where to use checked vs unchecked.](https://stackoverflow.com/questions/27578/when-to-choose-checked-and-unchecked-exceptions/19061110#19061110)
 
 ## Avoid unnecessary use of checked exceptions
+
 Overuse of checked exceptions can make an API far less pleasant to use. Forces caller to handle the exception.
 
 Burden is justified if the exceptional condition cannot be prevented by the proper use of the API and the programmer using the API can take some useful action once confronted with the exception. Unless both of these conditions hold, an unchecked exception is more appropriate.
 
 ## Favor the use of standard exceptions
+
 `IllegalArgumentException` (Non-null parameter value is inappropriate) `IllegalStateException` (Object state is inappropriate for method invocation) `NullPointerException` (Parameter value is null where prohibited) `IndexOutOfBoundsException`, `ConcurrentModificationException`, `UnsupportedOperationException`
 
 ## Document all exceptions thrown by each method
@@ -99,8 +102,10 @@ Unchecked exceptions represent programming errors so it is wise to document them
 **If an exception is thrown by many methods in a class for the same reason, it is acceptable to document the exception in the class's documentation comment.**
 
 ## Include failure-capture information in detail messages
+
 **To capture the failure, the detail message of an exception should contain values of all parameter and fields that "contributed" to the exception.**
-```
+
+```java
 public IndexOutOfBoundsException(int lowerBound, int upperBound, int index) {
   // Generate a detailed message that captures the failure
   super("Lower bound: " + lowerBound + ", Upper bound: " + upperBound + ", Index: " + index);
@@ -113,10 +118,12 @@ public IndexOutOfBoundsException(int lowerBound, int upperBound, int index) {
 ```
 
 ## Don't ignore Exceptions
+
 **An empty catch block defeats the purpose of exception.**
 
 ## Exceptions code smells
-```
+
+```java
 try {
    // 100 lines of code
   ...
@@ -124,13 +131,9 @@ try {
   //Something failed.. not sure what or where, is it important or is it a bug, who knows ¯\_(ツ)_/¯
 }
 ```
+
 Ideally try catch around the line where exception is expected or a few lines to make the code more readable.
 
 ## Catch all unhandled exceptions in the global error handler and log
+
 Unhandled exceptions indicate programming errors, most likely the API was not used correctly and that's a bug that could be fixed
-
-
-
-
-
-

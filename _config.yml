@@ -29,6 +29,7 @@ permalink: pretty
 paginate: 3
 paginate_path: "page/:num"
 category_dir: categories
+highlighter: none
 
 plugins:
   - jekyll-sitemap
@@ -36,9 +37,9 @@ plugins:
   - jekyll-redirect-from
 
 prose:
-  rooturl: '_posts'
-  siteurl: 'http://blog.maskalik.com'
-  media: 'uploads/2015'
+  rooturl: "_posts"
+  siteurl: "http://blog.maskalik.com"
+  media: "uploads/2015"
   ignore:
     - _config.yml
     - /_layouts
@@ -234,4 +235,3 @@ prose:
           element: "text"
           label: "Permalink"
           value: ""
-

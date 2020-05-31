@@ -9,7 +9,7 @@ tags:
   - storekit
   - objective-c
 meta description: >-
-  Describes a few not documented scenarios that have surfaced for me in the past in production environment.  
+  Describes a few not documented scenarios that have surfaced for me in the past in production environment.
 ---
 
 After having integrated in-app payments using Apple platform and processing tens of thousands of purchase receipts through the back-end, I’ve learned a few valuable lessons about issues that can only surface in production. Some of these gotchas are either not documented, hard to find in documentation or just strange behavior that only presents itself in a live environment. This is a guide that I wish I had while I was integrating; it would have saved me a few gray hairs.
@@ -20,13 +20,7 @@ There is a small percentage of successful purchase receipts, when verified via b
 
 ## Strange transaction id formats in purchase receipts
 
-Normally transaction ids are 15 digits like:
-
-`400000123456789`
-
-But there are times when our server receives a receipt with the transaction in the following, uuid format:
-
-`FAB60FFD-906D-48CB-8FED-092C4B2707D6`
+Normally transaction ids are 15 digits like: `400000123456789`. But there are times when our server receives a receipt with the transaction in the following, uuid format: `FAB60FFD-906D-48CB-8FED-092C4B2707D6`
 
 These strange receipt formats when verified with Apple’s back-end also come back with an empty `in_app[]` array. There is no definite answer on [stackoverflow.com](http://stackoverflow.com) or Apple’s developer forums, but it looks like it could be a hack. The best course of action is to not call `finishTransaction` on a receipt that doesn’t have transactions and is not valid.
 
@@ -46,8 +40,8 @@ What this also is trying to tell you is that sometimes this property will be nil
 
 The following fields are only available when `transactionState` is `SKPaymentTransactionState.purchase` or `SKPaymentTransactionState.restored`.
 
--   SKPaymentTransaction.transactionDate
--   SKPaymentTransaction.transactionIdentifier
+- SKPaymentTransaction.transactionDate
+- SKPaymentTransaction.transactionIdentifier
 
 ### For product callbacks:
 
@@ -60,33 +54,38 @@ Be sure not to miss the “Note” section of the [SKProductRequest description]
 If your app can receive multiple requests to retrieve products, I would add `SKProductRequest` references to a `NSMutableSet` data structure and remove them after `requestDidFinish` callback fires.
 
 Here is an example for initiating get products info request.
-```
-- (void)getProducts:(NSSet*)productIDs {  
-  NSLog(@"Requesting %lu products", (unsigned long)[productIDs count]);  
-  
-  SKProductsRequest* productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIDs];  
-  productsRequest.delegate = self;  
-  
-  @synchronized(_productsRequests) {  
-    [_productsRequests addObject: productsRequest];  
-  }  
-  [productsRequest start];  
+
+```objectivec
+- (void)getProducts:(NSSet*)productIDs {
+  NSLog(@"Requesting %lu products", (unsigned long)[productIDs count]);
+
+  SKProductsRequest* productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIDs];
+  productsRequest.delegate = self;
+
+  @synchronized(_productsRequests) {
+    [_productsRequests addObject: productsRequest];
+  }
+  [productsRequest start];
 }
 ```
+
 Example interface:
-```
-@interface IapAppleDelegate : NSObject<SKProductsRequestDelegate>  
-{  
-  NSMutableSet *_productsRequests;  
+
+```objectivec
+@interface IapAppleDelegate : NSObject<SKProductsRequestDelegate>
+{
+  NSMutableSet *_productsRequests;
 }
 ```
-Removing references after request has be completed. 
-```
-- (void)requestDidFinish:(SKRequest *)request  
-{  
-  @synchronized(_productsRequests) {  
-    [_productsRequests removeObject:request];  
-  }  
+
+Removing references after request has be completed.
+
+```objectivec
+- (void)requestDidFinish:(SKRequest *)request
+{
+  @synchronized(_productsRequests) {
+    [_productsRequests removeObject:request];
+  }
 }
 ```
 
