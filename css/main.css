@@ -380,14 +380,14 @@ pre[class*="language-"] {
   border-radius: 4px;
 }
 
-p code,
-:not(pre) > code[class*="language-"] {
+p code {
   border: 1px solid #e3edf3;
-  background-color: #f7fafb;
+  background: #f7fafb !important;
   padding: 2px 4px;
-  font-size: 95%;
+  font-size: 90%;
   border-radius: 4px;
   -webkit-font-smoothing: antialiased;
+  color: #383838;
 }
 
 ol.linenums {
