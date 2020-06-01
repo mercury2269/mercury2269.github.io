@@ -29,7 +29,6 @@ permalink: pretty
 paginate: 3
 paginate_path: "page/:num"
 category_dir: categories
-highlighter: none
 
 plugins:
   - jekyll-sitemap
