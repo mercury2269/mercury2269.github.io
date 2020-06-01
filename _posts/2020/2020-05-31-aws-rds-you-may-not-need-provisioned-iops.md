@@ -2,7 +2,7 @@
 layout: post
 category: blog
 published: true
-title: AWS RDS: You may not need Provisioned IOPS
+title: "AWS RDS: You may not need Provisioned IOPS"
 tags:
   - aws
   - rds
