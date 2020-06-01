@@ -32,7 +32,7 @@ If the database workload is data intensive and requires more than 250MiB/s throu
 
 Given the same number of provisioned IOPS for both drives and throughput of less than 250MiB/s, the performance consistency with IO1 types does not come cheap. And because the performance is very similar, you can save a lot of money if your application doesn’t need 99.9% performance consistency. Here is a table comparing [monthly cost](https://aws.amazon.com/ebs/pricing/) of GP2 baseline IOPS with the exact same size and provisioned IOPS of the IO1 type.
 
-![](https://github.com/mercury2269/mercury2269.github.io/raw/master/uploads/2020/20200531-iops-to-gp2-price-comparison.jpg)
+![](https://github.com/mercury2269/mercury2269.github.io/raw/master/uploads/2020/20200531-iops-to-gp2-price-comparison.png)
 ## Choosing a correct instance type
 
 Another important factor that could limit the performance of your database is an underlying virtual Amazon Elastic Compute Cloud (EC2) instance type. EBS bandwidth varies between different EC2 instance types, and it’s possible that the EC2 bandwidth is less than the maximum amount of throughput supported by your EBS volume. I’ve personally run into this issue when my application’s database instance type was configured at `m4.xlarge` with dedicated EBS performance of 750 Mbps which translated to about 93.76 MiB/s, which was less than 250MiB/s expected throughput of the storage. EC2 instance type specifications are listed [here](https://aws.amazon.com/ec2/instance-types/).
