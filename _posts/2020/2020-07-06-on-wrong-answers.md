@@ -1,0 +1,45 @@
+---
+layout: post
+category: blog
+published: true
+title: "On Wrong Answers"
+tags:
+  - thoughts
+meta description: >-
+  As we grow and learn about our craft, many of our old views or opinions that were based on wrong assumptions will change. 
+---
+I love this quote from [Kellan Elliot-McCrea](https://kellanem.com/):
+
+> Your answers are wrong. Or they will be soon.
+
+As we learn, grow and the world around us changes, it is inevitable that our views and beliefs change as well. One area where software engineers are bound to change opinions is around languages and frameworks.
+
+With time and opportunity to build projects with technologies that were once trending and exciting, we notice that even the latest technology has pros and cons, and is not a perfect utopia like we thought it would be when we were just starting out.
+
+I have had my share of wrong answers. I wrote about one of them in the [post about JavaScript](https://blog.maskalik.com/javascript/2014/03/17/getting-serious-about-javascript/) back in 2014. To understand why I wrote it in the first place, I wanted to take the trip down the memory lane, look at the evolution of JavaScript, and how it has affected my opinion over the years.
+
+Back in the early days of the web, most web pages were generated on the back-end by web servers, and resulting HTML was sent to a client to be rendered by a browser. Navigation between pages or content required every page to be loaded by the browser. In the mid-2000s, GMail and Google Maps were launched using a new technology called AJAX, shorthand for Asynchronous JavaScript + XML, which allowed for pages to be dynamically updated from the web server without making a full page load. Being obsessed with computers running fast, rendering content without a full page refresh seemed to me so much quicker and almost more magical than the traditional way. I quickly became a fan of this new approach and jumped on any opportunity to implement such behavior.
+
+Around the year 2006, [the jQuery](https://en.wikipedia.org/wiki/JQuery) library came along and made it very easy to dynamically update the HTML Document Object Model. Besides providing an easy to use fluent API, jQuery also abstracted differences of JavaScript (ECMAScript) implementation of all major browsers. Finally, it made it easy to initiate AJAX requests, parse the data, and then update a portion of a web page. As a side note, very soon after, Microsoft also came out with its AJAX implementation for the ASP.NET Web Forms: ASP.NET AJAX 1.0. It provided JSON serialization features for .NET web-services and allowed developers to use 3rd party JavaScript libraries like jQuery directly to request data formatted as [JSON](https://en.wikipedia.org/wiki/JSON) from the back-end. At the beginning of my career as a .NET developer, jQuery with ASP.NET Web Services became my favorite tool when building dynamic web applications.
+
+In the early 2010s, many libraries and frameworks started popping up that allowed engineers to render entire sites with JavaScript and make them look more like native or desktop applications rather than web sites. They were called [single-page applications](https://en.wikipedia.org/wiki/Single-page_application) or SPAs. A few of the first ones that come to mind are Backbone, Angular, Ember, and Knockout.js.
+
+My first experience working on a couple of medium-sized SPAs using the Knockout.js library taught me that I could no longer get away with just a surface understanding of JavaScript, which was enough earlier when I putt together sites with jQuery. In addition to reading [JavaScript: The Good Parts](https://amzn.to/38bCaKe) by Douglas Crockford, I also purchased and read [JavsScript Patterns](https://amzn.to/2VolVVd) by Stoyan Stefanov. Those two books helped me to become much more comfortable with the language and make my now non-trivial JavaScript projects more maintainable.
+
+As I was becoming more comfortable with writing non-trivial single-page JavaScript applications, Node.js was starting to gain popularity. It opened up a new frontier, and JavaScript developers could now not only create applications in a browser but also on the server. Node.js brought the simplicity of JavaScript to the backend. It was easy to get started, just import some packages and run one command to execute your script. Because I enjoyed the novelty and innovativeness of SPAs, I was naturally gravitating at playing around with Node.js and wanting to use it in my future projects.
+
+Besides being simple to get started with, Node.js had multiple other selling points going for it. First of all, because typically all I/O in a JavaScript engine is performed via events and callbacks, asynchronous in nature and never blocks the executing thread, Node.js is very efficient at processing many requests and is very well suited for web applications. It could handle a much bigger throughput than synchronous web applications. Another selling point was using a single language to write your front end, SPA application and backend to power it. Lastly, because Node.js library came only with a basic core library that helped to write server applications, it relied on the community to write the missing pieces. Very soon, every little bit of non-trial code was published as a node package manager (NPM) package and could be imported into your project with a one line command. Almost like Apple’s trademark “There’s an App for That”, npm had a package for anything you could think of. A large number of available packages allows JavaScript developers to build apps really fast. But that speed did not come for free. Not having a standard library encouraged package developers to rely on other packages, which in turn also relied on other packages. A number of dependencies started to become a major source of frustration. The following quote is from an article that describes this problem really well:
+
+In order to use these 3 methods node_modules needs 1826 files. And that’s just 4 of mentioned 976 installed packages. - [What’s really wrong with node_modules and why this is your fault](https://medium.com/hackernoon/whats-really-wrong-with-node-modules-and-why-this-is-your-fault-8ac9fa893823)
+
+With a larger amount of dependencies, there is also a higher likelihood that a dependency may need to be updated and may not be compatible with existing code, therefore a large dependency graph is also more costly to maintain in the long term. Around the year 2015, it took me more than a week to put together a clean boilerplate that needed everything for a modern SPA project (React, Redux, Webpack, History, Router, Hot Reloading, etc,.) and only a year to learn that some of the dependencies were obsolete, and I if I wanted to migrate to the next version of Webpack everything had to be redone. It felt like a wasted effort. Luckily thanks to a very helpful project, [Create React App](https://reactjs.org/docs/create-a-new-react-app.html), I don’t have to do this again. It takes care of setting up and configuring all the tools necessary for a React SPA and makes it easier to maintain project dependencies.
+
+Using Node.js on large backend projects may be quicker to build, as PayPal [reported back in](https://medium.com/paypal-engineering/node-js-at-paypal-4e2d1d08ce4f) 2013, but due to the dynamic nature of the language, and not having a type system, I could imagine it will be more difficult to maintain it over the long term. Yes, you can write a lot of unit tests to make sure your refactoring did not break dependencies or use TypeScript to add typing. However, the former comes with a good deal of overhead, and it might be just easier to use a statically typed language in the first place rather than going with the latter.
+
+## My Soon To Be Wrong Opinions Today
+
+SPAs are a lot more expensive to build and maintain, and they come with a good deal of additional complexity. Given a lot of overhead, I think SPAs should not be a default choice for building web applications, even today. Yes, there is a place for them but you need to make a conscious decision and accept the overhead and tradeoff. Over time I’ve changed my approach and found it’s much more interesting to solve business problems rather than spending a lot of mental energy just so you can achieve an arbitrary faster and smoother user interface.
+
+If you are not building a native-like UI but still need some portion of the page to be dynamically updated, the same technique we used a decade ago, making AJAX calls to the back-end and updating a page with JavaScript, is still effective, simple, and comes with very little overhead.
+
+There are many valid use cases where JavaScript on the back-end is a good choice. But unless your application is taking advantage of the async I/O and event loop, it may be easier to maintain it in the long term with a language that comes with a proper standard library and is statically typed.
